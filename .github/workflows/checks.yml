@@ -1,0 +1,61 @@
+name: checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: ubuntu-22.04, python: "3.8" }    # the oldest Python SKILL.md promises
+          - { os: ubuntu-latest, python: "3.13" }
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Tests (replay against Premiere's saves, eval inputs and graders, links)
+        run: python3 -I tests/run_all.py
+
+      - name: Roadmap and proof figures are current
+        run: python3 -I tools/update_roadmap.py --check
+
+      - name: No home folder paths in committed projects
+        run: python3 -I tools/premiere-pro/scrub_steps.py --check fixtures/premiere-pro/steps/*.prproj skills/*/evals/files/*.prproj
+
+      - name: Nothing committed that should be ignored
+        run: |
+          if git ls-files | grep -E '\.prin$|Auto-Save/|-workspace/|__pycache__|\.DS_Store$'; then
+            echo "These files must not be committed (see .gitignore and CLAUDE.md)"; exit 1
+          fi
+
+  skill-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Agent Skills specification (skills-ref)
+        run: |
+          pip install skills-ref==0.1.1
+          for d in skills/*/; do
+            [ -f "$d/SKILL.md" ] && agentskills validate "$d"
+          done
+
+      - name: Plugin marketplace manifest
+        run: |
+          npm install -g @anthropic-ai/claude-code@2.1.318
+          claude plugin validate .

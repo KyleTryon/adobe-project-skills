@@ -1,0 +1,253 @@
+{
+  "skill_name": "premiere-pro-projects",
+  "fixture_note": "Every file in files/ is built from the public demo project's steps by tools/premiere-pro/build_eval_files.py (which says how each one is made); tests/premiere-pro/test_eval_files.py checks they still match. The project is 1920x1080, 23.976 fps; its media is in fixtures/premiere-pro/media/ if a reviewer wants to open a result in Premiere. Each run copies its input in as demo.prproj.",
+  "history": "Run results and earlier iterations: RESULTS.md. Cases 10-15 test multi-step editing (graded on the end state) and two requests the skill must decline; 'runs' sets how many runs each gets per arm.",
+  "common_assertions": [
+    "The project folder holds only demo.prproj and any deliverable the user asked for (an SRT or chapter list): no .bak, unpacked XML or scripts left next to the user's project",
+    "Before a timeline change, a backup of the changed sequence exists as a new sequence inside the project (not only as a file copy)"
+  ],
+  "evals": [
+    {
+      "id": 1,
+      "name": "pip-slide-in",
+      "prompt": "the little picture-in-picture of clip-a on V2 in my clip-a sequence (starts 0:12) just pops on. make it slide in from the right edge over 10 frames and stay put, with motion blur. project is demo.prproj",
+      "expected_output": "One Transform on clip-a V2 item 1 (clip-a.mp4, In 0:05.005) with Position keys at 0:12.012 (off the right edge) and 0:12.429 (centre), stored in source time (5.005 s and 5.422 s), motion blur on; nothing else changed except a backup sequence.",
+      "files": [
+        "evals/files/pip.prproj"
+      ],
+      "assertions": [
+        "prproj.py validate passes on the output against the input",
+        "Exactly one Transform was added, on clip-a V2 item 1; no other item's effects changed",
+        "Position has 2 keys at 0:12.012 and 0:12.429 (±1 frame) on the timeline, i.e. stored as InPoint + (timeline − Start)",
+        "The first key is off the right edge (x ≥ 1.5, y = 0.5) and the second at 0.5:0.5",
+        "Use Composition's Shutter Angle (ParameterID 9) is false"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "trimmed-head-slide",
+      "prompt": "In clip-a, the clip-b shot on V1 (starts 0:06.298) should slide in from the left: start with its centre 30% of the way across and reach the middle over its first 24 frames. Edit demo.prproj please.",
+      "expected_output": "One Transform on clip-a V1 item 2 (clip-b.mp4, In 1.335 s) with Position keys 0.3:0.5 at 0:06.298 and 0.5:0.5 at 0:07.299, stored in source time (1.335 s and 2.336 s); the PiP's existing Transform on V2 untouched; nothing else changed except a backup sequence.",
+      "files": [
+        "evals/files/trimmed.prproj"
+      ],
+      "assertions": [
+        "prproj.py validate passes on the output against the input",
+        "Exactly one Transform was added, on clip-a V1 item 2; the Transform on V2 item 1 is unchanged",
+        "Position (ParameterID 2) has 2 keys at 0:06.298 and 0:07.299 (±1 frame) on the timeline, i.e. stored as InPoint + (timeline − Start), not as offsets from the clip's start",
+        "The keys' values are 0.3:0.5 then 0.5:0.5",
+        "The audio crossfade and fade-out on A1 are unchanged"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "split-interview",
+      "prompt": "split the interview clip under 0:45 in my Interview sequence (video and audio together) so i can pull the second half later. demo.prproj",
+      "expected_output": "Interview's V1 and A1 interview.mp4 item each become two pieces meeting at 0:45.003 (frame 1079; 0:45.000 isn't on the 23.976 grid, ±1 frame accepted). Source continuity and total length (1:32.968) preserved, with a new link for the new pair.",
+      "files": [
+        "evals/files/interview.prproj"
+      ],
+      "assertions": [
+        "prproj.py validate passes on the output against the input",
+        "Interview has 2 items on V1 and 2 on A1, contiguous from 0:00 to 1:32.968",
+        "The pieces meet at 0:45.0 (±1 frame), on the frame grid, and the second piece's In equals the first's Out",
+        "Interview has 2 links, each pairing a V1 item with the A1 item of the same Start/End",
+        "Every clip ClipID in the project is unique"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "label-while-open",
+      "prompt": "i've got demo.prproj open in premiere right now. can you quickly mark every clip in the clip-a sequence between 0:05 and 0:12 mango so I can review them",
+      "expected_output": "The agent does not write to demo.prproj while the user has it open. It identifies the clips (clip-a's V1 and A1 clip-b pieces covering 0:05-0:12, four items, not the backup sequence) and, since clip labels aren't yet proven against Premiere, suggests doing it in Premiere (select the four clips, Label > Mango). If it offers a scripted write anyway, it says the result is unproven and asks the user to save and close the project first.",
+      "files": [
+        "evals/files/review.prproj"
+      ],
+      "assertions": [
+        "demo.prproj is unchanged (nothing written while Premiere has it open)",
+        "The reply suggests labelling the clips in Premiere, or, if it offers to write the label itself, says that isn't proven and asks the user to save and close the project first",
+        "The reply identifies the right clips: clip-a's V1+A1 clip-b pieces at 0:06.006-0:10.010 and 0:10.010-0:21.980 (four items), and lists none from 'clip-a (backup before verify)'"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "filler-markers",
+      "prompt": "can you drop a marker on every uh and um in the Interview sequence of demo.prproj so I can find them and cut them?",
+      "expected_output": "14 sequence markers on Interview, one at each filler word Premiere's Speech-to-Text flagged (empty-text tokens with the filler flag), from 0:11.900 to 1:28.590; pauses not marked; nothing else changed except a backup sequence.",
+      "files": [
+        "evals/files/transcribed.prproj"
+      ],
+      "assertions": [
+        "prproj.py validate passes on the output against the input",
+        "Interview has exactly 14 new markers, each within 1 frame of a filler token's start (0:11.900, 0:13.180, 0:20.900, 0:22.860, 0:25.540, 0:34.380, 0:58.910, 1:00.880, 1:02.210, 1:05.940, 1:10.220, 1:14.950, 1:16.060, 1:28.590)",
+        "No marker sits on a pause token that isn't a filler",
+        "The transcript (TranscriptData) is unchanged"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "transcript-cut",
+      "prompt": "in the Interview sequence Sean says \"meet our mission. um I'm sorry. uh our deadline.\" around 1:14 - cut it so it just says \"meet our deadline.\" Keep video and audio together. demo.prproj",
+      "expected_output": "The agent finds the self-correction from the embedded transcript, not by guessing times: words 'mission.' (1:13.940), filler, \"I'm sorry.\", filler, 'Our' (1:16.340) and 'deadline.' (1:16.580). It backs up Interview, splits V1 and A1 together at a frame between 'our' (ends 1:13.860) and 'mission.' and again at a frame between 'Our' and 'deadline.' (~1:16.576), and ripple-deletes the middle so the gap closes. About 2.7 s comes out and the sequence gets that much shorter; the transcript read back across the cut says '...meet our deadline.'",
+      "files": [
+        "evals/files/transcribed.prproj"
+      ],
+      "assertions": [
+        "prproj.py validate passes on the output against the input",
+        "The cut times come from the transcript: the first cut point is within 1 frame after 1:13.860 and at or before 1:13.940; the second is within 1 frame before 1:16.580",
+        "V1 and A1 have the same two pieces with matching Start/End (still linked); no gap is left between them",
+        "The Interview sequence is 2.6-2.8 s shorter than before",
+        "cut-transcript on the output reads 'meet our deadline.' with no 'mission', \"I'm sorry\" or second 'our'",
+        "Nothing outside 1:13.8-1:16.6 of the source is removed"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "captions-after-cut",
+      "prompt": "I cut the interviewer's \"Okay, great. Let's begin...\" bit out of the Interview sequence. can you give me an srt that matches what's in the cut now? demo.prproj",
+      "expected_output": "An SRT built from the embedded transcript mapped through the current cut list, not the source transcript. The removed turn (\"Okay, great. Let's begin. Tell me a little about yourself.\") is gone; Sean's \"Yes. Yes. Of course.\" starts at about 0:15.99, and everything after the cut is shifted 5.547 s earlier than in the source. The project is not changed.",
+      "files": [
+        "evals/files/interview-cut.prproj"
+      ],
+      "assertions": [
+        "An .srt file is delivered and the project file is byte-for-byte unchanged",
+        "No cue contains \"Let's begin\" or \"Tell me a little about yourself\"",
+        "A cue reading 'Yes.' starts between 0:15.95 and 0:16.05",
+        "Cue times after the cut are 5.5-5.6 s earlier than the same words' source times",
+        "No empty cues, no double spaces, and cue times never run backwards or overlap",
+        "The last cue ends at or before 1:27.421 (the sequence end)"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "rename-speakers",
+      "prompt": "premiere labelled the speakers in the interview transcript as Speaker 1 and Speaker 2. Speaker 1 is the interviewer, just call them Interviewer, and Speaker 2 is Sean Campbell. can you fix the names in demo.prproj?",
+      "expected_output": "The agent reads the speakers (Speaker 1 and Speaker 2, with who says what), renames them in the embedded transcript to 'Interviewer' and 'Sean Campbell' with rename-speaker, and leaves every word, timing and speaker assignment as it was. No backup sequence is needed because no timeline changes.",
+      "files": [
+        "evals/files/transcribed.prproj"
+      ],
+      "assertions": [
+        "prproj.py validate passes on the output against the input",
+        "prproj.py speakers on the output lists exactly 'Interviewer' and 'Sean Campbell' and no 'Speaker 1' or 'Speaker 2'",
+        "The opening 'Hi, Sean.' is attributed to Interviewer",
+        "Every word's text, start and end time is unchanged (transcript --json diff shows only speaker names)",
+        "Speaker GUIDs and which segment belongs to which speaker are unchanged",
+        "No timeline objects (track items, sequences) changed"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "crossfade-no-handles",
+      "prompt": "add a 1 second audio crossfade between clip-a and clip-b on A1 in the clip-a sequence, at the cut around 0:05. demo.prproj",
+      "expected_output": "The agent checks handles before writing. clip-a ends at source 0:04.963 of a longer file, so it has a tail handle, but clip-b starts at source 0:00.000, so there is no media before its head and a centred 1 s crossfade can't be built. It either does not add the crossfade and explains why, offering to roll the cut 0.5 s later, use an end-at-cut transition or fade clip-a out instead, or (if it changes the edit) makes room first and says so. It never writes a crossfade that runs past clip-b's media.",
+      "files": [
+        "evals/files/no-handles.prproj"
+      ],
+      "assertions": [
+        "The reply says clip-b has no head handle (its source in point is 0:00) as the reason a centred crossfade can't go in as-is",
+        "If no edit was agreed, the project file is byte-for-byte unchanged",
+        "If a crossfade was added, validate passes and both clips cover at least 0.5 s of media on their side of the cut (left clip OutPoint + d/2 within its media; right clip InPoint - d/2 >= 0)",
+        "No AudioTransitionTrackItem extends beyond the media of either clip",
+        "At least one concrete alternative is offered (roll the cut, a different alignment or a fade)"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "rough-cut",
+      "runs": 3,
+      "prompt": "rough cut the Interview sequence in demo.prproj: take out every um and uh, and the interviewer's \"Okay, great. Let's begin. Tell me a little about yourself.\" bit. keep video and audio together and close the gaps",
+      "expected_output": "Interview is cut into pieces of the same source with every filler token (Speech-to-Text's empty-text filler words, 14 of them, one inside the removed turn) and the interviewer's turn at 0:15.98-0:21.46 removed, video and audio together, gaps closed. Every other word stays whole: cuts sit on frame boundaries in the gaps between words, or at the frame nearest a boundary where words touch. A backup of Interview exists.",
+      "files": [
+        "evals/files/transcribed.prproj"
+      ],
+      "assertions": [
+        "prproj.py validate passes on the output against the input",
+        "No filler token is still audible (each keeps at most one frame of its media)",
+        "Every word of the interviewer's \"Okay, great. Let's begin. Tell me a little about yourself.\" turn is gone",
+        "Every other word is kept whole (loses at most one frame)",
+        "V1 and A1 have identical pieces (still in sync)",
+        "The pieces are contiguous from 0:00, on the frame grid, and none is shorter than 3 frames"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "assemble",
+      "runs": 3,
+      "prompt": "make me a new sequence called Assembly with the same settings as the Custom sequence, and lay in back to back from 0:00: clip-a from its start for 4 seconds, clip-b from 0:02 to 0:08, then interview.mp4 from 1:00 to 1:10. put a 1 second audio crossfade on each of the two cuts. demo.prproj",
+      "expected_output": "A new sequence Assembly (a copy of the empty Custom, so the same frame size and rate) with three linked A/V clips back to back from 0:00: clip-a 0-4 s, clip-b 2-8 s, interview 60-70 s (each within a frame, as place snaps to frames), and a 1 s Constant Power crossfade centred on each cut. All three clips have media beyond each cut, so the crossfades fit. Other sequences unchanged.",
+      "files": [
+        "evals/files/interview.prproj"
+      ],
+      "assertions": [
+        "prproj.py validate passes on the output against the input",
+        "A sequence named Assembly exists with Custom's frame size and frame rate",
+        "Its V1 has exactly clip-a 0-4 s, clip-b 2-8 s and interview.mp4 60-70 s of source (±1 frame each), back to back from 0:00",
+        "Its A1 pieces match V1 exactly (linked, in sync)",
+        "There are exactly two audio transitions, each a Constant Power crossfade of 1 s (±1 frame) centred on a cut",
+        "The Custom, Interview and clip-a sequences are unchanged"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "speaker-chapters",
+      "runs": 3,
+      "prompt": "add a YouTube chapter marker to the Interview sequence at every change of speaker, named after whoever's talking, then give me the chapter list i can paste into the YouTube description. demo.prproj",
+      "expected_output": "Six Chapter markers on Interview, one per speaker turn from the Speech-to-Text speaker labels (HR Screener at 0:01.02 or 0:00, Sean Campbell 0:10.14, HR Screener 0:15.98, Sean Campbell 0:21.54, HR Screener 0:50.70, Sean Campbell 0:58.22; the 1:24.34 segment is the same speaker, so no new chapter), each named after its speaker; the 9 existing comparison markers untouched; and a chapter list starting at 0:00, as YouTube requires.",
+      "files": [
+        "evals/files/named-speakers.prproj"
+      ],
+      "assertions": [
+        "prproj.py validate passes on the output against the input",
+        "Interview has one new Chapter marker per change of speaker, within a frame of each turn's start (the first may be at 0:00)",
+        "Each new chapter's name contains the name of the speaker of that turn",
+        "The existing markers are unchanged",
+        "The reply contains a chapter list with one line per chapter, the first at 0:00"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "cut-and-crossfade",
+      "runs": 3,
+      "prompt": "in the clip-a sequence, take out the part of the clip-b shot between 0:08 and 0:10 on the timeline (video and audio), close the gap, and put a 1 second audio crossfade at the new cut. demo.prproj",
+      "expected_output": "clip-b is split at ~0:08 and ~0:10, the middle removed with a ripple, so clip-a sequence is 2 s shorter and V1/A1 read clip-a 0-4.963, clip-b (src 0-~3.04), clip-b (src ~5.04-18.06). A 1 s Constant Power crossfade sits centred on the new cut (both sides have media to spare there); the original clip-a/clip-b cut at 0:04.963 gets nothing (clip-b has no media before it). A backup exists.",
+      "files": [
+        "evals/files/no-handles.prproj"
+      ],
+      "assertions": [
+        "prproj.py validate passes on the output against the input",
+        "V1 reads clip-a to 0:04.963, then clip-b cut at 0:08 (±1 frame) with 2 s (±2 frames) of its source removed, its end unchanged; contiguous, on the grid, no pieces under 3 frames",
+        "A1 pieces match V1 exactly",
+        "Exactly one audio transition: a 1 s (±1 frame) Constant Power crossfade centred on the new cut",
+        "The sequence is 2 s (±2 frames) shorter and the other sequences are unchanged"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "trim-blocked-by-fade",
+      "prompt": "trim the last 2 seconds off the clip-b shot at the end of my clip-a sequence (video and audio). demo.prproj",
+      "expected_output": "No change to the file. clip-b's audio on A1 has transitions (the crossfade at its head and a fade-out at its tail), and editing a clip with transitions isn't covered, so the agent explains that the fade blocks the trim and suggests doing it in Premiere (or removing the fade there first). It doesn't hand-edit the transition XML or trim the video alone.",
+      "files": [
+        "evals/files/trimmed.prproj"
+      ],
+      "assertions": [
+        "demo.prproj is unchanged",
+        "The reply says the audio fade (a transition on clip-b's audio) is why the trim can't be done here",
+        "The reply suggests doing the trim in Premiere, or removing the fade there first"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "speed-not-covered",
+      "prompt": "make the clip-b shot in my clip-a sequence play at double speed. demo.prproj",
+      "expected_output": "No change to the file. Speed changes aren't covered by the skill (no step proves how Premiere stores them), so the agent says so and points the user to Clip > Speed/Duration in Premiere, without inventing PlaybackSpeed XML.",
+      "files": [
+        "evals/files/no-handles.prproj"
+      ],
+      "assertions": [
+        "demo.prproj is unchanged",
+        "The reply says speed changes can't be made in the file here (not supported or not proven), rather than claiming success",
+        "The reply suggests doing it in Premiere (Speed/Duration)"
+      ]
+    }
+  ]
+}

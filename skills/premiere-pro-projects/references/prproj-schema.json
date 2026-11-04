@@ -1,0 +1,9217 @@
+{
+ "format": 1,
+ "generated_by": "scripts/schema_dump.py --write",
+ "premiere_builds": [
+  "26.5.2x5"
+ ],
+ "evidence": [
+  "00",
+  "01",
+  "02",
+  "03",
+  "04",
+  "05",
+  "06",
+  "07",
+  "08",
+  "09",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18",
+  "19",
+  "20",
+  "21",
+  "22",
+  "23"
+ ],
+ "note": "What was seen in the evidence files, not what Premiere allows. present/of = objects that had the path / objects of the class.",
+ "classes": {
+  "AudioClip": {
+   "purpose": "audio clip instance: Source, ClipID, In/OutPoint, SecondaryContents, channel layout",
+   "explained_in": [
+    "04-object-graph-and-project.md",
+    "09-track-items-and-links.md"
+   ],
+   "classids": {
+    "b8830d03-de02-41ee-84ec-fe566dc70cd9": 231
+   },
+   "versions": {
+    "8": 231
+   },
+   "count": 231,
+   "identity": {
+    "ObjectID": 231
+   },
+   "referenced_by": {
+    "MasterClip": 186,
+    "SubClip": 45
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "Clip",
+     "present": 231,
+     "of": 231,
+     "kinds": {
+      "element": 231
+     }
+    },
+    {
+     "path": "Clip/Node",
+     "present": 231,
+     "of": 231,
+     "kinds": {
+      "element": 231
+     }
+    },
+    {
+     "path": "Clip/Node/Properties",
+     "present": 231,
+     "of": 231,
+     "kinds": {
+      "element": 231
+     }
+    },
+    {
+     "path": "Clip/Node/Properties/asl.clip.label.color",
+     "present": 231,
+     "of": 231,
+     "kinds": {
+      "int": 231
+     },
+     "values": [
+      "19005",
+      "480554",
+      "6769408"
+     ]
+    },
+    {
+     "path": "Clip/Node/Properties/asl.clip.label.name",
+     "present": 231,
+     "of": 231,
+     "kinds": {
+      "string": 231
+     }
+    },
+    {
+     "path": "Clip/MarkerOwner",
+     "present": 183,
+     "of": 231,
+     "kinds": {
+      "element": 183
+     }
+    },
+    {
+     "path": "Clip/MarkerOwner/Markers@ObjectRef",
+     "present": 183,
+     "of": 231,
+     "kinds": {
+      "ref": 183
+     },
+     "targets": {
+      "Markers": 183
+     }
+    },
+    {
+     "path": "Clip/Source@ObjectRef",
+     "present": 231,
+     "of": 231,
+     "kinds": {
+      "ref": 231
+     },
+     "targets": {
+      "AudioMediaSource": 183,
+      "AudioSequenceSource": 48
+     }
+    },
+    {
+     "path": "Clip/ClipID",
+     "present": 231,
+     "of": 231,
+     "kinds": {
+      "guid": 231
+     }
+    },
+    {
+     "path": "Clip/InPoint",
+     "present": 45,
+     "of": 231,
+     "kinds": {
+      "int": 39,
+      "int64": 6
+     }
+    },
+    {
+     "path": "Clip/OutPoint",
+     "present": 45,
+     "of": 231,
+     "kinds": {
+      "int64": 45
+     }
+    },
+    {
+     "path": "Clip/InUse",
+     "present": 186,
+     "of": 231,
+     "kinds": {
+      "bool": 186
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "SecondaryContents",
+     "present": 231,
+     "of": 231,
+     "kinds": {
+      "element": 231
+     }
+    },
+    {
+     "path": "SecondaryContents/SecondaryContentItem@ObjectRef",
+     "present": 231,
+     "of": 231,
+     "kinds": {
+      "ref": 462
+     },
+     "targets": {
+      "SecondaryContent": 462
+     }
+    },
+    {
+     "path": "SecondaryContents/SecondaryContentItem@Index",
+     "present": 231,
+     "of": 231,
+     "kinds": {
+      "index": 462
+     }
+    },
+    {
+     "path": "AudioChannelLayout",
+     "present": 231,
+     "of": 231,
+     "kinds": {
+      "json": 231
+     }
+    }
+   ]
+  },
+  "AudioClipTrack": {
+   "purpose": "audio track (A1, A2, …)",
+   "explained_in": [
+    "02-document-structure.md",
+    "08-tracks.md"
+   ],
+   "classids": {
+    "097f6203-99ae-11d5-84f2-8cf14bde7040": 170
+   },
+   "versions": {
+    "7": 170
+   },
+   "count": 170,
+   "identity": {
+    "ObjectUID": 170
+   },
+   "referenced_by": {
+    "AudioTrackGroup": 170,
+    "AudioTrackInlet": 170
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "ClipTrack",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "element": 170
+     }
+    },
+    {
+     "path": "ClipTrack/Track",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "element": 170
+     }
+    },
+    {
+     "path": "ClipTrack/Track/Node",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "element": 170
+     }
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "element": 170
+     }
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/TL.SQTrackExpanded",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int": 170
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/TL.SQTrackExpandedHeight",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int": 170
+     },
+     "values": [
+      "41",
+      "210"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/MZ.SourceTrackState",
+     "present": 147,
+     "of": 170,
+     "kinds": {
+      "int": 147
+     },
+     "values": [
+      "0",
+      "2"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/MZ.SourceTrackNumber",
+     "present": 147,
+     "of": 170,
+     "kinds": {
+      "int": 147
+     },
+     "values": [
+      "0",
+      "-1"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/TL.SQTrackAudioKeyframeStyle",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int": 170
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/TL.SQTrackShy",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int": 170
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/CM.KeyframeMode",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "bool": 170
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/MZ.TrackTargeted",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int": 170
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/MZ.TrackName",
+     "present": 1,
+     "of": 170,
+     "kinds": {
+      "string": 1
+     }
+    },
+    {
+     "path": "ClipTrack/Track/ID",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int": 170
+     },
+     "values": [
+      "2",
+      "3",
+      "4",
+      "5"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/MediaType",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "guid": 170
+     }
+    },
+    {
+     "path": "ClipTrack/Track/Index",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int": 170
+     },
+     "values": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "path": "ClipTrack/ClipItems",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "element": 170
+     }
+    },
+    {
+     "path": "ClipTrack/ClipItems/TrackItems",
+     "present": 28,
+     "of": 170,
+     "kinds": {
+      "element": 28
+     }
+    },
+    {
+     "path": "ClipTrack/ClipItems/TrackItems/TrackItem@ObjectRef",
+     "present": 28,
+     "of": 170,
+     "kinds": {
+      "ref": 45
+     },
+     "targets": {
+      "AudioClipTrackItem": 45
+     }
+    },
+    {
+     "path": "ClipTrack/ClipItems/TrackItems/TrackItem@Index",
+     "present": 28,
+     "of": 170,
+     "kinds": {
+      "index": 45
+     }
+    },
+    {
+     "path": "ClipTrack/ClipItems/MediaType",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "guid": 170
+     }
+    },
+    {
+     "path": "ClipTrack/ClipItems/Index",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int": 170
+     },
+     "values": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "path": "ClipTrack/TransitionItems",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "element": 170
+     }
+    },
+    {
+     "path": "ClipTrack/TransitionItems/TrackItems",
+     "present": 4,
+     "of": 170,
+     "kinds": {
+      "element": 4
+     }
+    },
+    {
+     "path": "ClipTrack/TransitionItems/TrackItems/TrackItem@ObjectRef",
+     "present": 4,
+     "of": 170,
+     "kinds": {
+      "ref": 7
+     },
+     "targets": {
+      "AudioTransitionTrackItem": 7
+     }
+    },
+    {
+     "path": "ClipTrack/TransitionItems/TrackItems/TrackItem@Index",
+     "present": 4,
+     "of": 170,
+     "kinds": {
+      "index": 7
+     }
+    },
+    {
+     "path": "ClipTrack/TransitionItems/MediaType",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "guid": 170
+     }
+    },
+    {
+     "path": "ClipTrack/TransitionItems/Index",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int": 170
+     },
+     "values": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "path": "AudioTrack",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "element": 170
+     }
+    },
+    {
+     "path": "AudioTrack/ComponentOwner",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "element": 170
+     }
+    },
+    {
+     "path": "AudioTrack/ComponentOwner/Components@ObjectRef",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "ref": 170
+     },
+     "targets": {
+      "AudioComponentChain": 170
+     }
+    },
+    {
+     "path": "AudioTrack/Panner@ObjectRef",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "ref": 170
+     },
+     "targets": {
+      "StereoToStereoPanProcessor": 170
+     }
+    },
+    {
+     "path": "AudioTrack/ID",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "guid": 170
+     }
+    },
+    {
+     "path": "AudioTrack/NextPannerID",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int64": 170
+     }
+    }
+   ]
+  },
+  "AudioClipTrackItem": {
+   "purpose": "audio item on a track: Start/End, component chain, `<ID>` GUID",
+   "explained_in": [
+    "02-document-structure.md",
+    "09-track-items-and-links.md"
+   ],
+   "classids": {
+    "064ec682-9ba6-11d5-af2d-9ca32c7d6164": 45
+   },
+   "versions": {
+    "11": 45
+   },
+   "count": 45,
+   "identity": {
+    "ObjectID": 45
+   },
+   "referenced_by": {
+    "Link": 45,
+    "AudioClipTrack": 45
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "ClipTrackItem",
+     "present": 45,
+     "of": 45,
+     "kinds": {
+      "element": 45
+     }
+    },
+    {
+     "path": "ClipTrackItem/ComponentOwner",
+     "present": 45,
+     "of": 45,
+     "kinds": {
+      "element": 45
+     }
+    },
+    {
+     "path": "ClipTrackItem/ComponentOwner/Components@ObjectRef",
+     "present": 45,
+     "of": 45,
+     "kinds": {
+      "ref": 45
+     },
+     "targets": {
+      "AudioComponentChain": 45
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem",
+     "present": 45,
+     "of": 45,
+     "kinds": {
+      "element": 45
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node",
+     "present": 44,
+     "of": 45,
+     "kinds": {
+      "element": 44
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties",
+     "present": 44,
+     "of": 45,
+     "kinds": {
+      "element": 44
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/MZ.AudioCategorization.AudioCategorizationAdjustmentMode",
+     "present": 44,
+     "of": 45,
+     "kinds": {
+      "string": 44
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/ESP.AdjustmentsModeID",
+     "present": 44,
+     "of": 45,
+     "kinds": {
+      "string": 44
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/monitor.show.audio.waveform",
+     "present": 2,
+     "of": 45,
+     "kinds": {
+      "bool": 2
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/monitor.take.audio.linked",
+     "present": 2,
+     "of": 45,
+     "kinds": {
+      "bool": 2
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/ESP.ClipMixTypeID",
+     "present": 44,
+     "of": 45,
+     "kinds": {
+      "int": 44
+     },
+     "values": [
+      "1",
+      "4"
+     ]
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/ESP.Tag",
+     "present": 44,
+     "of": 45,
+     "kinds": {
+      "string": 44
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/ESP.PresetGuid",
+     "present": 44,
+     "of": 45,
+     "kinds": {
+      "guid": 44
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/MZ.EssentialSound.AdjustmentModeWorkflowType",
+     "present": 44,
+     "of": 45,
+     "kinds": {
+      "int": 44
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/ESP.RestorationSection.4",
+     "present": 5,
+     "of": 45,
+     "kinds": {
+      "float": 5
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/ESP.RestorationSection.9",
+     "present": 5,
+     "of": 45,
+     "kinds": {
+      "int": 5
+     },
+     "values": [
+      "60"
+     ]
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/ESP.ClaritySection.2",
+     "present": 5,
+     "of": 45,
+     "kinds": {
+      "int": 5
+     },
+     "values": [
+      "3"
+     ]
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/ESP.SoundEffectsSection.3",
+     "present": 5,
+     "of": 45,
+     "kinds": {
+      "int": 5
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Start",
+     "present": 17,
+     "of": 45,
+     "kinds": {
+      "int64": 17
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/End",
+     "present": 45,
+     "of": 45,
+     "kinds": {
+      "int64": 45
+     }
+    },
+    {
+     "path": "ClipTrackItem/SubClip@ObjectRef",
+     "present": 45,
+     "of": 45,
+     "kinds": {
+      "ref": 45
+     },
+     "targets": {
+      "SubClip": 45
+     }
+    },
+    {
+     "path": "ClipTrackItem/HeadTransition@ObjectRef",
+     "present": 4,
+     "of": 45,
+     "kinds": {
+      "ref": 4
+     },
+     "targets": {
+      "AudioTransitionTrackItem": 4
+     }
+    },
+    {
+     "path": "ClipTrackItem/TailTransition@ObjectRef",
+     "present": 5,
+     "of": 45,
+     "kinds": {
+      "ref": 5
+     },
+     "targets": {
+      "AudioTransitionTrackItem": 5
+     }
+    },
+    {
+     "path": "ID",
+     "present": 45,
+     "of": 45,
+     "kinds": {
+      "guid": 45
+     }
+    },
+    {
+     "path": "PreRenderComponentChainHashVersion",
+     "present": 45,
+     "of": 45,
+     "kinds": {
+      "int": 45
+     },
+     "values": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "AudioCompileSettings": {
+   "purpose": "audio side of a compile setting",
+   "explained_in": [],
+   "classids": {
+    "34b10007-ab6d-49a7-bac5-7b60d919e387": 144
+   },
+   "versions": {
+    "6": 144
+   },
+   "count": 144,
+   "identity": {
+    "ObjectID": 144
+   },
+   "referenced_by": {
+    "CompileSettings": 120,
+    "ProjectSettings": 24
+   },
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "AudioSettings@ObjectRef",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "ref": 144
+     },
+     "targets": {
+      "AudioSettings": 144
+     }
+    },
+    {
+     "path": "Interleave",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "SampleType",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "3"
+     ]
+    },
+    {
+     "path": "Compressor",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int64": 144
+     }
+    }
+   ]
+  },
+  "AudioComponentChain": {
+   "purpose": "audio stack (item, MasterClip, track)",
+   "explained_in": [
+    "08-tracks.md",
+    "12-effects-and-keyframes.md"
+   ],
+   "classids": {
+    "3cb131d1-d3c0-47ae-a19a-bdf75ea11674": 449
+   },
+   "versions": {
+    "4": 449
+   },
+   "count": 449,
+   "identity": {
+    "ObjectID": 449
+   },
+   "referenced_by": {
+    "MasterClip": 186,
+    "AudioClipTrack": 170,
+    "AudioMixTrack": 48,
+    "AudioClipTrackItem": 45
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "DefaultVol",
+     "present": 231,
+     "of": 449,
+     "kinds": {
+      "bool": 231
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "DefaultVolumeComponentID",
+     "present": 231,
+     "of": 449,
+     "kinds": {
+      "int": 231
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "DefaultChannelVolumeComponentID",
+     "present": 231,
+     "of": 449,
+     "kinds": {
+      "int": 231
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "ComponentChain",
+     "present": 449,
+     "of": 449,
+     "kinds": {
+      "element": 262,
+      "empty": 187
+     }
+    },
+    {
+     "path": "ComponentChain/Components",
+     "present": 218,
+     "of": 449,
+     "kinds": {
+      "element": 218
+     }
+    },
+    {
+     "path": "ComponentChain/Components/Component@ObjectRef",
+     "present": 218,
+     "of": 449,
+     "kinds": {
+      "ref": 436
+     },
+     "targets": {
+      "AudioFader": 218,
+      "AudioMeter": 218
+     }
+    },
+    {
+     "path": "ComponentChain/Components/Component@Index",
+     "present": 218,
+     "of": 449,
+     "kinds": {
+      "index": 436
+     }
+    },
+    {
+     "path": "ComponentChain/Node",
+     "present": 92,
+     "of": 449,
+     "kinds": {
+      "element": 92
+     }
+    },
+    {
+     "path": "ComponentChain/Node/Properties",
+     "present": 92,
+     "of": 449,
+     "kinds": {
+      "element": 92
+     }
+    },
+    {
+     "path": "ComponentChain/Node/Properties/MZ.ComponentChain.ActiveComponentID",
+     "present": 92,
+     "of": 449,
+     "kinds": {
+      "int": 92
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "ComponentChain/Node/Properties/MZ.ComponentChain.ActiveComponentParamIndex",
+     "present": 92,
+     "of": 449,
+     "kinds": {
+      "int64": 92
+     }
+    },
+    {
+     "path": "AudioChannelLayout",
+     "present": 449,
+     "of": 449,
+     "kinds": {
+      "json": 449
+     }
+    },
+    {
+     "path": "ChannelType",
+     "present": 449,
+     "of": 449,
+     "kinds": {
+      "int": 449
+     },
+     "values": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "AudioComponentParam": {
+   "purpose": "audio effect parameter: float (Level, Balance, Volume) or bool (Mute, Bypass)",
+   "explained_in": [
+    "02-document-structure.md",
+    "12-effects-and-keyframes.md"
+   ],
+   "classids": {
+    "a714635e-a628-4b27-9d59-77eba47dbc1a": 388,
+    "32657501-3aa4-445f-a49b-d09ecb9fa1ae": 218
+   },
+   "versions": {
+    "10": 606
+   },
+   "count": 606,
+   "identity": {
+    "ObjectID": 606
+   },
+   "referenced_by": {
+    "AudioFader": 436,
+    "StereoToStereoPanProcessor": 170
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "StartKeyframe",
+     "present": 175,
+     "of": 606,
+     "kinds": {
+      "keyframes": 175
+     }
+    },
+    {
+     "path": "CurrentValue",
+     "present": 175,
+     "of": 606,
+     "kinds": {
+      "float": 170,
+      "bool": 5
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "Name",
+     "present": 606,
+     "of": 606,
+     "kinds": {
+      "string": 606
+     }
+    },
+    {
+     "path": "RangeLocked",
+     "present": 436,
+     "of": 606,
+     "kinds": {
+      "bool": 436
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "UnitsString",
+     "present": 218,
+     "of": 606,
+     "kinds": {
+      "string": 218
+     }
+    },
+    {
+     "path": "UpperBound",
+     "present": 218,
+     "of": 606,
+     "kinds": {
+      "float": 218
+     }
+    },
+    {
+     "path": "IsInverted",
+     "present": 170,
+     "of": 606,
+     "kinds": {
+      "bool": 170
+     },
+     "values": [
+      "true"
+     ]
+    }
+   ]
+  },
+  "AudioFader": {
+   "purpose": "track fader",
+   "explained_in": [
+    "08-tracks.md",
+    "12-effects-and-keyframes.md"
+   ],
+   "classids": {
+    "1a38c583-ed5c-11d5-abc4-c1cbf61ec590": 218
+   },
+   "versions": {
+    "3": 218
+   },
+   "count": 218,
+   "identity": {
+    "ObjectID": 218
+   },
+   "referenced_by": {
+    "AudioComponentChain": 218
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "AudioComponent",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "element": 218
+     }
+    },
+    {
+     "path": "AudioComponent/Component",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "element": 218
+     }
+    },
+    {
+     "path": "AudioComponent/Component/Params",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "element": 218
+     }
+    },
+    {
+     "path": "AudioComponent/Component/Params/Param@ObjectRef",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "ref": 436
+     },
+     "targets": {
+      "AudioComponentParam": 436
+     }
+    },
+    {
+     "path": "AudioComponent/Component/Params/Param@Index",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "index": 436
+     }
+    },
+    {
+     "path": "AudioComponent/Component/ID",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "int": 218
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "AudioComponent/AudioChannelLayout",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "json": 218
+     }
+    },
+    {
+     "path": "AudioComponent/AudioComponentType",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "int": 218
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "AudioComponent/FrameRate",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "int": 218
+     },
+     "values": [
+      "5292000"
+     ]
+    },
+    {
+     "path": "AudioComponent/ChannelType",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "int": 218
+     },
+     "values": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "AudioMediaSource": {
+   "purpose": "Clip source → Media (audio)",
+   "explained_in": [
+    "06-project-panel.md"
+   ],
+   "classids": {
+    "f588da05-fc2a-4fbc-9383-74d653b379e3": 138
+   },
+   "versions": {
+    "2": 138
+   },
+   "count": 138,
+   "identity": {
+    "ObjectID": 138
+   },
+   "referenced_by": {
+    "SecondaryContent": 366,
+    "AudioClip": 183
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "MediaSource",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "element": 138
+     }
+    },
+    {
+     "path": "MediaSource/Content",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "empty": 138
+     }
+    },
+    {
+     "path": "MediaSource/Media@ObjectURef",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "ref": 138
+     },
+     "targets": {
+      "Media": 138
+     }
+    },
+    {
+     "path": "OriginalDuration",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "int64": 138
+     }
+    }
+   ]
+  },
+  "AudioMeter": {
+   "purpose": "track meter",
+   "explained_in": [
+    "08-tracks.md",
+    "12-effects-and-keyframes.md"
+   ],
+   "classids": {
+    "72ea4700-f615-11d5-abc4-c186585e63e0": 218
+   },
+   "versions": {
+    "2": 218
+   },
+   "count": 218,
+   "identity": {
+    "ObjectID": 218
+   },
+   "referenced_by": {
+    "AudioComponentChain": 218
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "AudioComponent",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "element": 218
+     }
+    },
+    {
+     "path": "AudioComponent/Component",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "element": 218
+     }
+    },
+    {
+     "path": "AudioComponent/Component/ID",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "int": 218
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "AudioComponent/AudioChannelLayout",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "json": 218
+     }
+    },
+    {
+     "path": "AudioComponent/AudioComponentType",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "int": 218
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "AudioComponent/FrameRate",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "int": 218
+     },
+     "values": [
+      "5292000"
+     ]
+    },
+    {
+     "path": "AudioComponent/ChannelType",
+     "present": 218,
+     "of": 218,
+     "kinds": {
+      "int": 218
+     },
+     "values": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "AudioMixTrack": {
+   "purpose": "sequence master bus",
+   "explained_in": [
+    "02-document-structure.md",
+    "08-tracks.md"
+   ],
+   "classids": {
+    "4b1d8400-e89e-11d5-abc4-a1a13b1e80a0": 48
+   },
+   "versions": {
+    "4": 48
+   },
+   "count": 48,
+   "identity": {
+    "ObjectID": 48
+   },
+   "referenced_by": {
+    "AudioTrackGroup": 48
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "AudioTrack",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "AudioTrack/ComponentOwner",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "AudioTrack/ComponentOwner/Components@ObjectRef",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "ref": 48
+     },
+     "targets": {
+      "AudioComponentChain": 48
+     }
+    },
+    {
+     "path": "AudioTrack/Panner@ObjectRef",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "ref": 48
+     },
+     "targets": {
+      "DefaultPanProcessor": 48
+     }
+    },
+    {
+     "path": "AudioTrack/ID",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "guid": 48
+     }
+    },
+    {
+     "path": "AudioTrack/SubType",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "3"
+     ]
+    },
+    {
+     "path": "AudioTrack/Assign",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "AudioTrack/NextPannerID",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int64": 48
+     }
+    },
+    {
+     "path": "Track",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "Track/Node",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "Track/Node/Properties",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "Track/Node/Properties/TL.SQTrackExpanded",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Track/Node/Properties/TL.SQTrackExpandedHeight",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "41"
+     ]
+    },
+    {
+     "path": "Track/Node/Properties/TL.SQTrackAudioKeyframeStyle",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "Track/Node/Properties/TL.SQTrackShy",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Track/ID",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "Track/MediaType",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "guid": 48
+     }
+    },
+    {
+     "path": "Track/Index",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Inlet@ObjectRef",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "ref": 48
+     },
+     "targets": {
+      "AudioTrackInlet": 48
+     }
+    }
+   ]
+  },
+  "AudioSequenceSource": {
+   "purpose": "Clip source → Sequence (a sequence used as a clip), audio",
+   "explained_in": [
+    "06-project-panel.md"
+   ],
+   "classids": {
+    "e8d4cc83-38cb-491f-9d94-e5f7e3b205ee": 48
+   },
+   "versions": {
+    "7": 48
+   },
+   "count": 48,
+   "identity": {
+    "ObjectID": 48
+   },
+   "referenced_by": {
+    "SecondaryContent": 96,
+    "AudioClip": 48
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "SequenceSource",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "SequenceSource/Content",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "empty": 48
+     }
+    },
+    {
+     "path": "SequenceSource/Sequence@ObjectURef",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "ref": 48
+     },
+     "targets": {
+      "Sequence": 48
+     }
+    },
+    {
+     "path": "OriginalDuration",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int64": 28,
+      "int": 20
+     }
+    }
+   ]
+  },
+  "AudioSettings": {
+   "purpose": "audio settings shell owned by project/compile settings",
+   "explained_in": [
+    "04-object-graph-and-project.md"
+   ],
+   "classids": {
+    "6baf5521-b132-4634-840e-13cec5bc86a4": 168
+   },
+   "versions": {
+    "8": 168
+   },
+   "count": 168,
+   "identity": {
+    "ObjectID": 168
+   },
+   "referenced_by": {
+    "AudioCompileSettings": 144,
+    "ProjectSettings": 24
+   },
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": []
+  },
+  "AudioStream": {
+   "purpose": "duration, layout, peak/conform cache paths",
+   "explained_in": [
+    "06-project-panel.md"
+   ],
+   "classids": {
+    "0b5cf52f-2b85-4863-890b-8844b64ecfe9": 138
+   },
+   "versions": {
+    "8": 138
+   },
+   "count": 138,
+   "identity": {
+    "ObjectID": 138
+   },
+   "referenced_by": {
+    "Media": 138
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "AudioChannelLayout",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "json": 138
+     }
+    },
+    {
+     "path": "Duration",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "int64": 138
+     }
+    },
+    {
+     "path": "SampleType",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "int": 138
+     },
+     "values": [
+      "3",
+      "7"
+     ]
+    },
+    {
+     "path": "ConformedAudioPath",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "path": 138
+     }
+    },
+    {
+     "path": "PeakFilePath",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "path": 138
+     }
+    },
+    {
+     "path": "FrameRate",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "int": 138
+     },
+     "values": [
+      "5292000"
+     ]
+    }
+   ]
+  },
+  "AudioTrackGroup": {
+   "purpose": "audio tracks + MasterTrack",
+   "explained_in": [
+    "02-document-structure.md",
+    "07-sequences.md"
+   ],
+   "classids": {
+    "9b9238b9-53a8-4cc3-b03f-b36246d052e6": 48
+   },
+   "versions": {
+    "6": 48
+   },
+   "count": 48,
+   "identity": {
+    "ObjectID": 48
+   },
+   "referenced_by": {
+    "Sequence": 48
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "TrackGroup",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "TrackGroup/Tracks",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "TrackGroup/Tracks/Track@ObjectURef",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "ref": 170
+     },
+     "targets": {
+      "AudioClipTrack": 170
+     }
+    },
+    {
+     "path": "TrackGroup/Tracks/Track@Index",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "index": 170
+     }
+    },
+    {
+     "path": "TrackGroup/NextTrackID",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "5",
+      "6"
+     ]
+    },
+    {
+     "path": "TrackGroup/FrameRate",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "5292000"
+     ]
+    },
+    {
+     "path": "MasterTrack@ObjectRef",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "ref": 48
+     },
+     "targets": {
+      "AudioMixTrack": 48
+     }
+    },
+    {
+     "path": "ID",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "guid": 48
+     }
+    },
+    {
+     "path": "AutomationSafeFlags",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "NumAdaptiveChannels",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "2"
+     ]
+    }
+   ]
+  },
+  "AudioTrackInlet": {
+   "purpose": "master inlet listing the source tracks",
+   "explained_in": [
+    "02-document-structure.md",
+    "08-tracks.md",
+    "16-checklist.md"
+   ],
+   "classids": {
+    "be3af080-e8c6-11d5-abc4-a1c6d5dee670": 48
+   },
+   "versions": {
+    "4": 48
+   },
+   "count": 48,
+   "identity": {
+    "ObjectID": 48
+   },
+   "referenced_by": {
+    "AudioMixTrack": 48
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "Sources",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "Sources/Source@ObjectURef",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "ref": 170
+     },
+     "targets": {
+      "AudioClipTrack": 170
+     }
+    },
+    {
+     "path": "Sources/Source@Index",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "index": 170
+     }
+    },
+    {
+     "path": "AudioChannelLayout",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "json": 48
+     }
+    }
+   ]
+  },
+  "AudioTransitionTrackItem": {
+   "purpose": "audio fade or crossfade on a track (`TransitionItems`, `HeadTransition`/`TailTransition`)",
+   "explained_in": [
+    "11-transitions.md"
+   ],
+   "classids": {
+    "23f687b6-9c5a-42f4-bea1-e7b3e28e7082": 7
+   },
+   "versions": {
+    "4": 7
+   },
+   "count": 7,
+   "identity": {
+    "ObjectID": 7
+   },
+   "referenced_by": {
+    "AudioClipTrackItem": 9,
+    "AudioClipTrack": 7
+   },
+   "seen_in": [
+    "13",
+    "14",
+    "15",
+    "16"
+   ],
+   "fields": [
+    {
+     "path": "TransitionTrackItem",
+     "present": 7,
+     "of": 7,
+     "kinds": {
+      "element": 7
+     }
+    },
+    {
+     "path": "TransitionTrackItem/TrackItem",
+     "present": 7,
+     "of": 7,
+     "kinds": {
+      "element": 7
+     }
+    },
+    {
+     "path": "TransitionTrackItem/TrackItem/Start",
+     "present": 7,
+     "of": 7,
+     "kinds": {
+      "int64": 7
+     }
+    },
+    {
+     "path": "TransitionTrackItem/TrackItem/End",
+     "present": 7,
+     "of": 7,
+     "kinds": {
+      "int64": 7
+     }
+    },
+    {
+     "path": "TransitionTrackItem/HasOutgoingClip",
+     "present": 7,
+     "of": 7,
+     "kinds": {
+      "bool": 7
+     },
+     "values": [
+      "true",
+      "false"
+     ]
+    },
+    {
+     "path": "TransitionTrackItem/HasIncomingClip",
+     "present": 7,
+     "of": 7,
+     "kinds": {
+      "bool": 7
+     },
+     "values": [
+      "true",
+      "false"
+     ]
+    },
+    {
+     "path": "TransitionTrackItem/DisplayName",
+     "present": 7,
+     "of": 7,
+     "kinds": {
+      "string": 7
+     }
+    },
+    {
+     "path": "TransitionTrackItem/MatchName",
+     "present": 7,
+     "of": 7,
+     "kinds": {
+      "string": 7
+     }
+    },
+    {
+     "path": "TransitionTrackItem/Alignment",
+     "present": 7,
+     "of": 7,
+     "kinds": {
+      "int64": 5,
+      "int": 2
+     }
+    },
+    {
+     "path": "AudioChannelLayout",
+     "present": 7,
+     "of": 7,
+     "kinds": {
+      "json": 7
+     }
+    },
+    {
+     "path": "FadeShapeValue",
+     "present": 5,
+     "of": 7,
+     "kinds": {
+      "int": 5
+     },
+     "values": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "BinProjectItem": {
+   "purpose": "bin",
+   "explained_in": [
+    "02-document-structure.md",
+    "06-project-panel.md"
+   ],
+   "classids": {
+    "dbfd6653-24da-480e-a35e-ba45e9504e4b": 22
+   },
+   "versions": {
+    "1": 22
+   },
+   "count": 22,
+   "identity": {
+    "ObjectUID": 22
+   },
+   "referenced_by": {
+    "RootProjectItem": 22
+   },
+   "seen_in": [
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "ProjectItem",
+     "present": 22,
+     "of": 22,
+     "kinds": {
+      "element": 22
+     }
+    },
+    {
+     "path": "ProjectItem/Node",
+     "present": 22,
+     "of": 22,
+     "kinds": {
+      "element": 22
+     }
+    },
+    {
+     "path": "ProjectItem/Node/Properties",
+     "present": 22,
+     "of": 22,
+     "kinds": {
+      "element": 22
+     }
+    },
+    {
+     "path": "ProjectItem/Node/Properties/project.icon.view.grid.order",
+     "present": 22,
+     "of": 22,
+     "kinds": {
+      "int": 22
+     },
+     "values": [
+      "6"
+     ]
+    },
+    {
+     "path": "ProjectItem/Node/Properties/Column.PropertyText.Label",
+     "present": 22,
+     "of": 22,
+     "kinds": {
+      "string": 22
+     }
+    },
+    {
+     "path": "ProjectItem/Node/Properties/list.view.expanded.state.<guid>",
+     "present": 22,
+     "of": 22,
+     "kinds": {
+      "bool": 31
+     },
+     "values": [
+      "true",
+      "false"
+     ]
+    },
+    {
+     "path": "ProjectItem/Name",
+     "present": 22,
+     "of": 22,
+     "kinds": {
+      "string": 22
+     }
+    },
+    {
+     "path": "ProjectItemContainer",
+     "present": 22,
+     "of": 22,
+     "kinds": {
+      "element": 22
+     }
+    },
+    {
+     "path": "ProjectItemContainer/Items",
+     "present": 22,
+     "of": 22,
+     "kinds": {
+      "element": 22
+     }
+    },
+    {
+     "path": "ProjectItemContainer/Items/Item@ObjectURef",
+     "present": 22,
+     "of": 22,
+     "kinds": {
+      "ref": 110
+     },
+     "targets": {
+      "ClipProjectItem": 110
+     }
+    },
+    {
+     "path": "ProjectItemContainer/Items/Item@Index",
+     "present": 22,
+     "of": 22,
+     "kinds": {
+      "index": 110
+     }
+    }
+   ]
+  },
+  "ClipChannelGroupVectorSerializer": {
+   "purpose": "MasterClip audio channel groups (empty if no audio)",
+   "explained_in": [],
+   "classids": {
+    "a3127a8c-95d4-456e-a7f5-171b3f922426": 255
+   },
+   "versions": {
+    "1": 255
+   },
+   "count": 255,
+   "identity": {
+    "ObjectID": 255
+   },
+   "referenced_by": {
+    "MasterClip": 255
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "ClipChannelVectors",
+     "present": 186,
+     "of": 255,
+     "kinds": {
+      "element": 186
+     }
+    },
+    {
+     "path": "ClipChannelVectors/ClipChannelVectorItem@ObjectRef",
+     "present": 186,
+     "of": 255,
+     "kinds": {
+      "ref": 186
+     },
+     "targets": {
+      "ClipChannelVectorSerializer": 186
+     }
+    },
+    {
+     "path": "ClipChannelVectors/ClipChannelVectorItem@Index",
+     "present": 186,
+     "of": 255,
+     "kinds": {
+      "index": 186
+     }
+    }
+   ]
+  },
+  "ClipChannelSerializer": {
+   "purpose": "one channel: `mSourceChannelIndex`, `SourceClipIndex`",
+   "explained_in": [],
+   "classids": {
+    "5c89aa7a-89a6-4483-becd-f2b1def42316": 372
+   },
+   "versions": {
+    "1": 372
+   },
+   "count": 372,
+   "identity": {
+    "ObjectID": 372
+   },
+   "referenced_by": {
+    "ClipChannelVectorSerializer": 372
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "mSourceChannelIndex",
+     "present": 372,
+     "of": 372,
+     "kinds": {
+      "int": 372
+     },
+     "values": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "path": "SourceClipIndex",
+     "present": 372,
+     "of": 372,
+     "kinds": {
+      "int": 372
+     },
+     "values": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "ClipChannelVectorSerializer": {
+   "purpose": "one group; `ChannelType` 1 stereo / 0 mono",
+   "explained_in": [],
+   "classids": {
+    "333d203b-3a53-4195-8894-fc7523ff3dc7": 186
+   },
+   "versions": {
+    "1": 186
+   },
+   "count": 186,
+   "identity": {
+    "ObjectID": 186
+   },
+   "referenced_by": {
+    "ClipChannelGroupVectorSerializer": 186
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "ClipChannels",
+     "present": 186,
+     "of": 186,
+     "kinds": {
+      "element": 186
+     }
+    },
+    {
+     "path": "ClipChannels/ClipChannelItem@ObjectRef",
+     "present": 186,
+     "of": 186,
+     "kinds": {
+      "ref": 372
+     },
+     "targets": {
+      "ClipChannelSerializer": 372
+     }
+    },
+    {
+     "path": "ClipChannels/ClipChannelItem@Index",
+     "present": 186,
+     "of": 186,
+     "kinds": {
+      "index": 372
+     }
+    },
+    {
+     "path": "ChannelType",
+     "present": 186,
+     "of": 186,
+     "kinds": {
+      "int": 186
+     },
+     "values": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "ClipLoggingInfo": {
+   "purpose": "ClipName, media in/out, frame rate, timecode format",
+   "explained_in": [],
+   "classids": {
+    "77ab7fdd-dcdf-465d-9906-7a330ca1e738": 255
+   },
+   "versions": {
+    "10": 255
+   },
+   "count": 255,
+   "identity": {
+    "ObjectID": 255
+   },
+   "referenced_by": {
+    "MasterClip": 255
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "CaptureMode",
+     "present": 138,
+     "of": 255,
+     "kinds": {
+      "int": 138
+     },
+     "values": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "path": "ClipName",
+     "present": 207,
+     "of": 255,
+     "kinds": {
+      "string": 207
+     }
+    },
+    {
+     "path": "MediaInPoint",
+     "present": 161,
+     "of": 255,
+     "kinds": {
+      "int": 161
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "MediaOutPoint",
+     "present": 161,
+     "of": 255,
+     "kinds": {
+      "int64": 161
+     }
+    },
+    {
+     "path": "MediaFrameRate",
+     "present": 207,
+     "of": 255,
+     "kinds": {
+      "int64": 138,
+      "int": 69
+     }
+    },
+    {
+     "path": "TimecodeFormat",
+     "present": 207,
+     "of": 255,
+     "kinds": {
+      "int": 207
+     },
+     "values": [
+      "101",
+      "103",
+      "110",
+      "200"
+     ]
+    }
+   ]
+  },
+  "ClipProjectItem": {
+   "purpose": "project-panel entry → MasterClip",
+   "explained_in": [
+    "02-document-structure.md"
+   ],
+   "classids": {
+    "cb4e0ed7-aca1-4171-8525-e3658dec06dd": 255
+   },
+   "versions": {
+    "1": 255
+   },
+   "count": 255,
+   "identity": {
+    "ObjectUID": 255
+   },
+   "referenced_by": {
+    "RootProjectItem": 145,
+    "BinProjectItem": 110
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "ProjectItem",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "element": 255
+     }
+    },
+    {
+     "path": "ProjectItem/Node",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "element": 255
+     }
+    },
+    {
+     "path": "ProjectItem/Node/Properties",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "element": 255
+     }
+    },
+    {
+     "path": "ProjectItem/Node/Properties/project.icon.view.grid.order",
+     "present": 145,
+     "of": 255,
+     "kinds": {
+      "int": 145
+     }
+    },
+    {
+     "path": "ProjectItem/Node/Properties/Column.PropertyText.Label",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "string": 255
+     }
+    },
+    {
+     "path": "ProjectItem/Name",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "string": 255
+     }
+    },
+    {
+     "path": "MasterClip@ObjectURef",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "ref": 255
+     },
+     "targets": {
+      "MasterClip": 255
+     }
+    }
+   ]
+  },
+  "CompileSettings": {
+   "purpose": "export/compile presets (movie, still, audio, custom, video preview)",
+   "explained_in": [],
+   "classids": {
+    "18a35d66-597e-4157-b783-938b5bec3547": 120
+   },
+   "versions": {
+    "4": 120
+   },
+   "count": 120,
+   "identity": {
+    "ObjectID": 120
+   },
+   "referenced_by": {
+    "Project": 120
+   },
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "VideoCompileSettings@ObjectRef",
+     "present": 120,
+     "of": 120,
+     "kinds": {
+      "ref": 120
+     },
+     "targets": {
+      "VideoCompileSettings": 120
+     }
+    },
+    {
+     "path": "AudioCompileSettings@ObjectRef",
+     "present": 120,
+     "of": 120,
+     "kinds": {
+      "ref": 120
+     },
+     "targets": {
+      "AudioCompileSettings": 120
+     }
+    },
+    {
+     "path": "CompilerClassIDFourCC",
+     "present": 120,
+     "of": 120,
+     "kinds": {
+      "int": 96,
+      "int64": 24
+     }
+    },
+    {
+     "path": "CompilerFourCC",
+     "present": 120,
+     "of": 120,
+     "kinds": {
+      "int": 96,
+      "int64": 24
+     }
+    },
+    {
+     "path": "ExportVideo",
+     "present": 120,
+     "of": 120,
+     "kinds": {
+      "bool": 120
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "ExportAudio",
+     "present": 120,
+     "of": 120,
+     "kinds": {
+      "bool": 120
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "AddToProjectWhenFinished",
+     "present": 120,
+     "of": 120,
+     "kinds": {
+      "bool": 120
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "BeepWhenFinished",
+     "present": 120,
+     "of": 120,
+     "kinds": {
+      "bool": 120
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "ExportWorkAreaOnly",
+     "present": 120,
+     "of": 120,
+     "kinds": {
+      "bool": 120
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "EmbedProjectLink",
+     "present": 120,
+     "of": 120,
+     "kinds": {
+      "bool": 120
+     },
+     "values": [
+      "false"
+     ]
+    }
+   ]
+  },
+  "DataMediaSource": {
+   "purpose": "TranscriptClip source",
+   "explained_in": [
+    "14-transcripts-and-captions.md"
+   ],
+   "classids": {
+    "ff36343e-4ece-4d37-ab61-e99b758f9d30": 5
+   },
+   "versions": {
+    "1": 5
+   },
+   "count": 5,
+   "identity": {
+    "ObjectID": 5
+   },
+   "referenced_by": {
+    "TranscriptClip": 5
+   },
+   "seen_in": [
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "MediaSource",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "element": 5
+     }
+    },
+    {
+     "path": "MediaSource/Content",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "empty": 5
+     }
+    },
+    {
+     "path": "MediaSource/Media@ObjectURef",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "ref": 5
+     },
+     "targets": {
+      "Media": 5
+     }
+    },
+    {
+     "path": "OriginalDuration",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "int": 5
+     },
+     "values": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "DataStream": {
+   "purpose": "stream of the synthetic transcript Media",
+   "explained_in": [
+    "06-project-panel.md",
+    "14-transcripts-and-captions.md"
+   ],
+   "classids": {
+    "9e4e76eb-b72f-4b9b-9ea8-2887b1cc24fd": 5
+   },
+   "versions": {
+    "1": 5
+   },
+   "count": 5,
+   "identity": {
+    "ObjectID": 5
+   },
+   "referenced_by": {
+    "Media": 5
+   },
+   "seen_in": [
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "Duration",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "int": 5
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "FrameRate",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "int64": 5
+     }
+    }
+   ]
+  },
+  "DataTrackGroup": {
+   "purpose": "caption/data tracks group",
+   "explained_in": [
+    "07-sequences.md",
+    "14-transcripts-and-captions.md"
+   ],
+   "classids": {
+    "b714b71d-6838-48dd-9b77-db19088ced7e": 48
+   },
+   "versions": {
+    "1": 48
+   },
+   "count": 48,
+   "identity": {
+    "ObjectID": 48
+   },
+   "referenced_by": {
+    "Sequence": 48
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "TrackGroup",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "TrackGroup/NextTrackID",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "TrackGroup/FrameRate",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int64": 48
+     }
+    }
+   ]
+  },
+  "DefaultPanProcessor": {
+   "purpose": "master panner",
+   "explained_in": [
+    "08-tracks.md"
+   ],
+   "classids": {
+    "33a94282-ee2c-11d5-abc4-c1cd7f9e3c10": 48
+   },
+   "versions": {
+    "2": 48
+   },
+   "count": 48,
+   "identity": {
+    "ObjectID": 48
+   },
+   "referenced_by": {
+    "AudioMixTrack": 48
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "PanProcessor",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent/Component",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent/Component/ID",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int64": 48
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent/AudioChannelLayout",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "json": 48
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent/AudioComponentType",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "PanProcessor/AudioComponent/FrameRate",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "5292000"
+     ]
+    },
+    {
+     "path": "PanProcessor/AudioComponent/ChannelType",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "DefaultPannerOutputChannelType",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "DefaultPannerInputChannelType",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "DefaultSequenceSettings": {
+   "purpose": "defaults for new sequences",
+   "explained_in": [
+    "04-object-graph-and-project.md"
+   ],
+   "classids": {
+    "567bdf53-d6d9-4d61-b2f1-f4834bebea9b": 24
+   },
+   "versions": {
+    "2": 24
+   },
+   "count": 24,
+   "identity": {
+    "ObjectID": 24
+   },
+   "referenced_by": {
+    "ProjectSettings": 24
+   },
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "TotalVideoTracks",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "DefaultAudioStandardMonoTracks",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "DefaultAudioStandardStereoTracks",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "DefaultAudioStandard51Tracks",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "DefaultAudioSubmixMonoTracks",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "DefaultAudioSubmixStereoTracks",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "DefaultAudioSubmix51Tracks",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "DummyCaptureSettings": {
+   "purpose": "capture settings placeholder",
+   "explained_in": [],
+   "classids": {
+    "328c2aa2-47f9-4211-805b-b6a6dbd4ca29": 24
+   },
+   "versions": {
+    "1": 24
+   },
+   "count": 24,
+   "identity": {
+    "ObjectID": 24
+   },
+   "referenced_by": {
+    "ProjectSettings": 24
+   },
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": []
+  },
+  "ExternallyProvidedTranscriptDocument": {
+   "purpose": "FlatBuffer `TranscriptData`",
+   "explained_in": [
+    "14-transcripts-and-captions.md"
+   ],
+   "classids": {
+    "e58c3975-8126-4176-92ec-2b4001983faf": 5
+   },
+   "versions": {
+    "1": 5
+   },
+   "count": 5,
+   "identity": {
+    "ObjectID": 5
+   },
+   "referenced_by": {
+    "TranscriptClip": 5
+   },
+   "seen_in": [
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "TranscriptProvider",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "guid": 5
+     }
+    },
+    {
+     "path": "TranscriptData@Encoding",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "string": 5
+     },
+     "values": [
+      "base64"
+     ]
+    },
+    {
+     "path": "TranscriptData@BinaryHash",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "guid": 5
+     }
+    },
+    {
+     "path": "TranscriptData",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "base64": 5
+     }
+    }
+   ]
+  },
+  "FileProjectItem": {
+   "purpose": "project item for a non-media file (e.g. a .txt)",
+   "explained_in": [
+    "02-document-structure.md",
+    "06-project-panel.md"
+   ],
+   "classids": {
+    "b28f14fe-793f-45be-bb28-fb82644995f4": 23
+   },
+   "versions": {
+    "1": 23
+   },
+   "count": 23,
+   "identity": {
+    "ObjectUID": 23
+   },
+   "referenced_by": {
+    "RootProjectItem": 23
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "ProjectItem",
+     "present": 23,
+     "of": 23,
+     "kinds": {
+      "element": 23
+     }
+    },
+    {
+     "path": "ProjectItem/Node",
+     "present": 23,
+     "of": 23,
+     "kinds": {
+      "element": 23
+     }
+    },
+    {
+     "path": "ProjectItem/Node/Properties",
+     "present": 23,
+     "of": 23,
+     "kinds": {
+      "element": 23
+     }
+    },
+    {
+     "path": "ProjectItem/Node/Properties/project.icon.view.grid.order",
+     "present": 23,
+     "of": 23,
+     "kinds": {
+      "int": 23
+     },
+     "values": [
+      "5",
+      "9"
+     ]
+    },
+    {
+     "path": "ProjectItem/Node/Properties/Column.PropertyText.Label",
+     "present": 23,
+     "of": 23,
+     "kinds": {
+      "string": 23
+     }
+    },
+    {
+     "path": "ProjectItem/Name",
+     "present": 23,
+     "of": 23,
+     "kinds": {
+      "string": 23
+     }
+    },
+    {
+     "path": "FullPath",
+     "present": 23,
+     "of": 23,
+     "kinds": {
+      "path": 23
+     }
+    }
+   ]
+  },
+  "IngestSettings": {
+   "purpose": "ingest options",
+   "explained_in": [],
+   "classids": {
+    "2db8f76b-2c37-48ee-925d-9a4f7278152d": 24
+   },
+   "versions": {
+    "2": 24
+   },
+   "count": 24,
+   "identity": {
+    "ObjectID": 24
+   },
+   "referenced_by": {
+    "Project": 24
+   },
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "Action",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "Enabled",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "false"
+     ]
+    }
+   ]
+  },
+  "Link": {
+   "purpose": "ties the linked A/V track items",
+   "explained_in": [
+    "09-track-items-and-links.md"
+   ],
+   "classids": {
+    "149d4ea5-a7d4-4b34-9bb7-16d783904bf2": 45
+   },
+   "versions": {
+    "1": 45
+   },
+   "count": 45,
+   "identity": {
+    "ObjectID": 45
+   },
+   "referenced_by": {
+    "Sequence": 45
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "TrackItemGroup",
+     "present": 45,
+     "of": 45,
+     "kinds": {
+      "element": 45
+     }
+    },
+    {
+     "path": "TrackItemGroup/TrackItems",
+     "present": 45,
+     "of": 45,
+     "kinds": {
+      "element": 45
+     }
+    },
+    {
+     "path": "TrackItemGroup/TrackItems/TrackItem@ObjectRef",
+     "present": 45,
+     "of": 45,
+     "kinds": {
+      "ref": 90
+     },
+     "targets": {
+      "VideoClipTrackItem": 45,
+      "AudioClipTrackItem": 45
+     }
+    },
+    {
+     "path": "TrackItemGroup/TrackItems/TrackItem@Index",
+     "present": 45,
+     "of": 45,
+     "kinds": {
+      "index": 90
+     }
+    }
+   ]
+  },
+  "Marker": {
+   "purpose": "one marker: a DVAMarker JSON string (name, comment, type, start time, colour)",
+   "explained_in": [
+    "02-document-structure.md",
+    "13-markers.md",
+    "16-checklist.md"
+   ],
+   "classids": {
+    "a45508e0-3ff7-4d04-90a7-2e0dfff4c910": 54
+   },
+   "versions": {
+    "3": 54
+   },
+   "count": 54,
+   "identity": {
+    "ObjectID": 54
+   },
+   "referenced_by": {
+    "Markers": 54
+   },
+   "seen_in": [
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "DVAMarker",
+     "present": 54,
+     "of": 54,
+     "kinds": {
+      "json": 54
+     }
+    }
+   ]
+  },
+  "Markers": {
+   "purpose": "marker list of a master clip (empty until a marker is added) or a sequence",
+   "explained_in": [
+    "13-markers.md",
+    "16-checklist.md"
+   ],
+   "classids": {
+    "bee50706-b524-416c-9f03-b596ce5f6866": 219
+   },
+   "versions": {
+    "4": 219
+   },
+   "count": 219,
+   "identity": {
+    "ObjectID": 219
+   },
+   "referenced_by": {
+    "VideoClip": 188,
+    "AudioClip": 183,
+    "Sequence": 12
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "Markers",
+     "present": 12,
+     "of": 219,
+     "kinds": {
+      "element": 12
+     }
+    },
+    {
+     "path": "Markers/Marker@Index",
+     "present": 12,
+     "of": 219,
+     "kinds": {
+      "index": 54
+     }
+    },
+    {
+     "path": "Markers/Marker",
+     "present": 12,
+     "of": 219,
+     "kinds": {
+      "element": 54
+     }
+    },
+    {
+     "path": "Markers/Marker/First",
+     "present": 12,
+     "of": 219,
+     "kinds": {
+      "guid": 54
+     }
+    },
+    {
+     "path": "Markers/Marker/Second@ObjectRef",
+     "present": 12,
+     "of": 219,
+     "kinds": {
+      "ref": 54
+     },
+     "targets": {
+      "Marker": 54
+     }
+    },
+    {
+     "path": "ByGUID",
+     "present": 219,
+     "of": 219,
+     "kinds": {
+      "string": 219
+     }
+    },
+    {
+     "path": "LastMetadataState",
+     "present": 219,
+     "of": 219,
+     "kinds": {
+      "guid": 219
+     }
+    },
+    {
+     "path": "LastContentState",
+     "present": 219,
+     "of": 219,
+     "kinds": {
+      "guid": 219
+     }
+    }
+   ]
+  },
+  "MasterClip": {
+   "purpose": "clip identity: Clips list, logging, channel map",
+   "explained_in": [
+    "02-document-structure.md",
+    "06-project-panel.md",
+    "09-track-items-and-links.md",
+    "14-transcripts-and-captions.md"
+   ],
+   "classids": {
+    "fb11c33a-b0a9-4465-aa94-b6d5db2628cf": 255
+   },
+   "versions": {
+    "12": 255
+   },
+   "count": 255,
+   "identity": {
+    "ObjectUID": 255
+   },
+   "referenced_by": {
+    "ClipProjectItem": 255,
+    "SubClip": 95
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "Node",
+     "present": 40,
+     "of": 255,
+     "kinds": {
+      "element": 40
+     }
+    },
+    {
+     "path": "Node/Properties",
+     "present": 3,
+     "of": 255,
+     "kinds": {
+      "element": 3
+     }
+    },
+    {
+     "path": "Node/Properties/BE.MasterClip.ChannelIndexToTranscribe",
+     "present": 3,
+     "of": 255,
+     "kinds": {
+      "int": 3
+     },
+     "values": [
+      "-1"
+     ]
+    },
+    {
+     "path": "Node/Properties/AMM.CurrentSolo",
+     "present": 2,
+     "of": 255,
+     "kinds": {
+      "json": 2
+     }
+    },
+    {
+     "path": "Node/Properties/monitor.edit.time",
+     "present": 2,
+     "of": 255,
+     "kinds": {
+      "int": 2
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/monitor.show.audio.waveform",
+     "present": 2,
+     "of": 255,
+     "kinds": {
+      "bool": 2
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/monitor.take.audio",
+     "present": 2,
+     "of": 255,
+     "kinds": {
+      "bool": 2
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "Node/Properties/monitor.take.video",
+     "present": 2,
+     "of": 255,
+     "kinds": {
+      "bool": 2
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "Node/Properties/monitor.zoom.in.time",
+     "present": 2,
+     "of": 255,
+     "kinds": {
+      "int": 2
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/monitor.zoom.out.time",
+     "present": 2,
+     "of": 255,
+     "kinds": {
+      "int64": 2
+     }
+    },
+    {
+     "path": "Node/ID",
+     "present": 40,
+     "of": 255,
+     "kinds": {
+      "int": 40
+     },
+     "values": [
+      "1000001",
+      "1000002"
+     ]
+    },
+    {
+     "path": "LoggingInfo@ObjectRef",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "ref": 255
+     },
+     "targets": {
+      "ClipLoggingInfo": 255
+     }
+    },
+    {
+     "path": "AudioComponentChains",
+     "present": 186,
+     "of": 255,
+     "kinds": {
+      "element": 186
+     }
+    },
+    {
+     "path": "AudioComponentChains/AudioComponentChain@ObjectRef",
+     "present": 186,
+     "of": 255,
+     "kinds": {
+      "ref": 186
+     },
+     "targets": {
+      "AudioComponentChain": 186
+     }
+    },
+    {
+     "path": "AudioComponentChains/AudioComponentChain@Index",
+     "present": 186,
+     "of": 255,
+     "kinds": {
+      "index": 186
+     }
+    },
+    {
+     "path": "Clips",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "element": 255
+     }
+    },
+    {
+     "path": "Clips/Clip@ObjectRef",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "ref": 377
+     },
+     "targets": {
+      "VideoClip": 186,
+      "AudioClip": 186,
+      "TranscriptClip": 5
+     }
+    },
+    {
+     "path": "Clips/Clip@Index",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "index": 377
+     }
+    },
+    {
+     "path": "AudioClipChannelGroups@ObjectRef",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "ref": 255
+     },
+     "targets": {
+      "ClipChannelGroupVectorSerializer": 255
+     }
+    },
+    {
+     "path": "Name",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "string": 255
+     }
+    },
+    {
+     "path": "DefMappingID",
+     "present": 138,
+     "of": 255,
+     "kinds": {
+      "guid": 138
+     }
+    },
+    {
+     "path": "MasterClipChangeVersion",
+     "present": 255,
+     "of": 255,
+     "kinds": {
+      "int": 255
+     }
+    }
+   ]
+  },
+  "Media": {
+   "purpose": "one file on disk: paths, importer, streams",
+   "explained_in": [
+    "02-document-structure.md",
+    "14-transcripts-and-captions.md",
+    "17-load-and-save.md"
+   ],
+   "classids": {
+    "7a5c103e-f3ac-4391-b6b4-7cc3d2f9a7ff": 212
+   },
+   "versions": {
+    "30": 212
+   },
+   "count": 212,
+   "identity": {
+    "ObjectUID": 212
+   },
+   "referenced_by": {
+    "VideoMediaSource": 138,
+    "AudioMediaSource": 138,
+    "DataMediaSource": 5
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "DataStream@ObjectRef",
+     "present": 5,
+     "of": 212,
+     "kinds": {
+      "ref": 5
+     },
+     "targets": {
+      "DataStream": 5
+     }
+    },
+    {
+     "path": "AudioStream@ObjectRef",
+     "present": 138,
+     "of": 212,
+     "kinds": {
+      "ref": 138
+     },
+     "targets": {
+      "AudioStream": 138
+     }
+    },
+    {
+     "path": "VideoStream@ObjectRef",
+     "present": 138,
+     "of": 212,
+     "kinds": {
+      "ref": 138
+     },
+     "targets": {
+      "VideoStream": 138
+     }
+    },
+    {
+     "path": "ModificationState@Encoding",
+     "present": 212,
+     "of": 212,
+     "kinds": {
+      "string": 212
+     },
+     "values": [
+      "base64"
+     ]
+    },
+    {
+     "path": "ModificationState@BinaryHash",
+     "present": 212,
+     "of": 212,
+     "kinds": {
+      "guid": 212
+     }
+    },
+    {
+     "path": "ModificationState",
+     "present": 212,
+     "of": 212,
+     "kinds": {
+      "base64": 212
+     }
+    },
+    {
+     "path": "RelativePath",
+     "present": 207,
+     "of": 212,
+     "kinds": {
+      "path": 234
+     }
+    },
+    {
+     "path": "ImplementationID",
+     "present": 212,
+     "of": 212,
+     "kinds": {
+      "guid": 212
+     }
+    },
+    {
+     "path": "FileKey",
+     "present": 207,
+     "of": 212,
+     "kinds": {
+      "guid": 207
+     }
+    },
+    {
+     "path": "Infinite",
+     "present": 46,
+     "of": 212,
+     "kinds": {
+      "bool": 46
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "ConformedAudioRate",
+     "present": 138,
+     "of": 212,
+     "kinds": {
+      "int": 138
+     },
+     "values": [
+      "5292000"
+     ]
+    },
+    {
+     "path": "ContentAndMetadataState",
+     "present": 207,
+     "of": 212,
+     "kinds": {
+      "guid": 207
+     }
+    },
+    {
+     "path": "ContentCredentialsInfo",
+     "present": 184,
+     "of": 212,
+     "kinds": {
+      "int": 184
+     },
+     "values": [
+      "5120"
+     ]
+    },
+    {
+     "path": "CCManifestLocation",
+     "present": 184,
+     "of": 212,
+     "kinds": {
+      "int": 184
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "CCFileModTime",
+     "present": 207,
+     "of": 212,
+     "kinds": {
+      "int64": 207
+     }
+    },
+    {
+     "path": "ActualMediaFilePath",
+     "present": 212,
+     "of": 212,
+     "kinds": {
+      "path": 207,
+      "int64": 5
+     }
+    },
+    {
+     "path": "FilePath",
+     "present": 212,
+     "of": 212,
+     "kinds": {
+      "path": 207,
+      "int64": 5
+     }
+    },
+    {
+     "path": "Title",
+     "present": 212,
+     "of": 212,
+     "kinds": {
+      "string": 212
+     }
+    },
+    {
+     "path": "MediaFileHistory0",
+     "present": 27,
+     "of": 212,
+     "kinds": {
+      "path": 27
+     }
+    }
+   ]
+  },
+  "PointComponentParam": {
+   "purpose": "2-D point parameter (Position, Anchor Point)",
+   "explained_in": [
+    "12-effects-and-keyframes.md"
+   ],
+   "classids": {
+    "ca81d347-309b-44d2-acc7-1c572efb973c": 10
+   },
+   "versions": {
+    "4": 10
+   },
+   "count": 10,
+   "identity": {
+    "ObjectID": 10
+   },
+   "referenced_by": {
+    "VideoFilterComponent": 10
+   },
+   "seen_in": [
+    "12",
+    "13",
+    "14",
+    "15",
+    "16"
+   ],
+   "fields": [
+    {
+     "path": "Name",
+     "present": 10,
+     "of": 10,
+     "kinds": {
+      "string": 10
+     }
+    },
+    {
+     "path": "IsTimeVarying",
+     "present": 5,
+     "of": 10,
+     "kinds": {
+      "bool": 5
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "ParameterID",
+     "present": 10,
+     "of": 10,
+     "kinds": {
+      "int": 10
+     },
+     "values": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "path": "StartKeyframe",
+     "present": 10,
+     "of": 10,
+     "kinds": {
+      "keyframes": 10
+     }
+    },
+    {
+     "path": "Keyframes",
+     "present": 5,
+     "of": 10,
+     "kinds": {
+      "keyframes": 5
+     }
+    }
+   ]
+  },
+  "Project": {
+   "purpose": "root: properties, settings refs, `NextID`",
+   "explained_in": [
+    "02-document-structure.md",
+    "04-object-graph-and-project.md",
+    "06-project-panel.md",
+    "16-checklist.md"
+   ],
+   "classids": {
+    "62ad66dd-0dcd-42da-a660-6d8fbde94876": 24
+   },
+   "versions": {
+    "45": 24
+   },
+   "count": 24,
+   "identity": {
+    "ObjectID": 24
+   },
+   "referenced_by": {},
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "Node",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "Node/Properties",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List@ObjectID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local id (Project scope)": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewStates",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewStates/ProjectViewState@Index",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "index": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewStates/ProjectViewState",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewStates/ProjectViewState/First",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "guid": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewStates/ProjectViewState/Second@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local ref (Project scope)": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState@ObjectID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local id (Project scope)": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/ProjectViewState.ID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "guid": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/ColumnListContents.Version",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "18"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/ProjectViewState.OriginalID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "guid": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/ProjectViewState.BinID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "1000000"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/ProjectViewState.ViewHidden",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/PreviewView.Visible",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/ContentView.LastViewed",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/IconView.Thumbnail.Size",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "200"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/FreeformView.Scale",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/ListView.Thumbnail.Size",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/IconView.Thumbnail.State",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/ListView.Thumbnail.State",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/Thumbnail.ShowsEffects.State",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/Sort.Type",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/Sort.Enabled",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/Sort.ColumnIndex",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/Sort.Direction",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/ListView.NameColumnWidth",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/IconSort.Type",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/IconSort.Direction",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/IconSort.ColumnIndex",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/SideNav.Visible",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/SideNav.Width",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "160"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/Project.IsEAProject",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ProjectViewState/Columns.List@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local ref (Project scope)": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ColumnList@ObjectID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local id (Project scope)": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ColumnList",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ColumnList/Columns",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ColumnList/Columns/Column@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local ref (Project scope)": 1392
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/ColumnList/Columns/Column@Index",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "index": 1392
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/LabelColumn@ObjectID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local id (Project scope)": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/LabelColumn",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/LabelColumn/Column.Name",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/LabelColumn/Column.ID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/LabelColumn/Column.Type",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "17"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/LabelColumn/Column.Class",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/LabelColumn/Column.Width",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "26"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/LabelColumn/Column.IsHidden",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/SelectedItemsColumn@ObjectID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local id (Project scope)": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/SelectedItemsColumn",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/SelectedItemsColumn/Column.Name",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/SelectedItemsColumn/Column.ID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/SelectedItemsColumn/Column.Type",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/SelectedItemsColumn/Column.Class",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/SelectedItemsColumn/Column.Width",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "26"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/SelectedItemsColumn/Column.IsHidden",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/NameColumn@ObjectID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local id (Project scope)": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/NameColumn",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/NameColumn/Column.Name",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/NameColumn/Column.ID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/NameColumn/Column.Type",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "24"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/NameColumn/Column.Class",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/NameColumn/Column.Width",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "200"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/NameColumn/Column.IsHidden",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/StringColumn@ObjectID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local id (Project scope)": 456
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/StringColumn",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 456
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/StringColumn/Column.Name",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 456
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/StringColumn/Column.ID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 456
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/StringColumn/Column.Type",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 456
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/StringColumn/Column.Class",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 456
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/StringColumn/Column.Width",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 456
+     },
+     "values": [
+      "100",
+      "150"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/StringColumn/Column.IsHidden",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 456
+     },
+     "values": [
+      "true",
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/TimecodeColumn@ObjectID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local id (Project scope)": 360
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/TimecodeColumn",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 360
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/TimecodeColumn/Column.Name",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 360
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/TimecodeColumn/Column.ID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 360
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/TimecodeColumn/Column.Type",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 360
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/TimecodeColumn/Column.Class",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 360
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/TimecodeColumn/Column.Width",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 360
+     },
+     "values": [
+      "100"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/TimecodeColumn/Column.IsHidden",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 360
+     },
+     "values": [
+      "true",
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/EditTextColumn@ObjectID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local id (Project scope)": 456
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/EditTextColumn",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 456
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/EditTextColumn/Column.Name",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 456
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/EditTextColumn/Column.ID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 456
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/EditTextColumn/Column.Type",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 456
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/EditTextColumn/Column.Class",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 456
+     },
+     "values": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/EditTextColumn/Column.Width",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 456
+     },
+     "values": [
+      "100"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/EditTextColumn/Column.IsHidden",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 456
+     },
+     "values": [
+      "true",
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/BoolPropertyColumn@ObjectID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "local id (Project scope)": 48
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/BoolPropertyColumn",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/BoolPropertyColumn/Column.Name",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 48
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/BoolPropertyColumn/Column.ID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 48
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/BoolPropertyColumn/Column.Type",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/BoolPropertyColumn/Column.Class",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/BoolPropertyColumn/Column.Width",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "100"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/BoolPropertyColumn/Column.IsHidden",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 48
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/BoolPropertyColumn/Column.Property.Key",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 48
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.List/BoolPropertyColumn/Column.Editable.Key",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 48
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "Node/Properties/BE.Prefs.AcceleratedRenderer.LastUsedIdentifier",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "guid": 24
+     }
+    },
+    {
+     "path": "Node/Properties/BE.Prefs.AcceleratedRenderer.LastUsedDisplayName",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "Node/Properties/BE.Prefs.kPrefsAcceleratedRenderer.OverridenIdentifier",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "guid": 24
+     }
+    },
+    {
+     "path": "Node/Properties/AM.PJShowWellState",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/MZ.Project.WorkspaceName",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "Node/Properties/ProjectViewState.Version",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "Node/Properties/project.settings.lastknowngoodprojectpath",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "path": 24
+     }
+    },
+    {
+     "path": "Node/Properties/project.settings.lastknownparentdirectorypathaboveprojectpath",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "path": 24
+     }
+    },
+    {
+     "path": "Node/Properties/MZ.Project.GUID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "guid": 24
+     }
+    },
+    {
+     "path": "Node/Properties/MZ.BuildVersion.Created",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "Node/Properties/MZ.BuildVersion.Modified",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "Node/Properties/MZ.Project.ApplicationID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "Node/Properties/TL.PJSnappingState",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "Node/Properties/PPro.UHB.ShowWorkspaceLabel",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/MZ.NextSequenceIndex",
+     "present": 20,
+     "of": 24,
+     "kinds": {
+      "int": 20
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "Node/Properties/MZ.PrefixKey.OpenSequenceGuidList.N",
+     "present": 21,
+     "of": 24,
+     "kinds": {
+      "guid": 46
+     }
+    },
+    {
+     "path": "RootProjectItem@ObjectURef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "RootProjectItem": 24
+     }
+    },
+    {
+     "path": "ProjectSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "ProjectSettings": 24
+     }
+    },
+    {
+     "path": "MovieCompileSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "CompileSettings": 24
+     }
+    },
+    {
+     "path": "StillCompileSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "CompileSettings": 24
+     }
+    },
+    {
+     "path": "AudioCompileSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "CompileSettings": 24
+     }
+    },
+    {
+     "path": "CustomCompileSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "CompileSettings": 24
+     }
+    },
+    {
+     "path": "VideoPreviewCompileSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "CompileSettings": 24
+     }
+    },
+    {
+     "path": "ScratchDiskSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "ScratchDiskSettings": 24
+     }
+    },
+    {
+     "path": "IngestSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "IngestSettings": 24
+     }
+    },
+    {
+     "path": "ProjectWorkspace@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "WorkspaceSettings": 24
+     }
+    },
+    {
+     "path": "NextID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "1000001",
+      "1000002",
+      "1000003"
+     ]
+    }
+   ]
+  },
+  "ProjectSettings": {
+   "purpose": "project-wide settings",
+   "explained_in": [],
+   "classids": {
+    "50c16708-a1a1-4d2f-98d5-4e283ae28353": 24
+   },
+   "versions": {
+    "21": 24
+   },
+   "count": 24,
+   "identity": {
+    "ObjectID": 24
+   },
+   "referenced_by": {
+    "Project": 24
+   },
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "VideoSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "VideoSettings": 24
+     }
+    },
+    {
+     "path": "AudioSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "AudioSettings": 24
+     }
+    },
+    {
+     "path": "VideoCompileSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "VideoCompileSettings": 24
+     }
+    },
+    {
+     "path": "AudioCompileSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "AudioCompileSettings": 24
+     }
+    },
+    {
+     "path": "CaptureSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "DummyCaptureSettings": 24
+     }
+    },
+    {
+     "path": "DefaultSequenceSettings@ObjectRef",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "ref": 24
+     },
+     "targets": {
+      "DefaultSequenceSettings": 24
+     }
+    },
+    {
+     "path": "ColorManagementSettings",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "json": 24
+     }
+    },
+    {
+     "path": "AudioTimeDisplay",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "200"
+     ]
+    },
+    {
+     "path": "VideoTimeDisplay",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "102"
+     ]
+    },
+    {
+     "path": "VideoTimeDisplayInitial",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "102"
+     ]
+    },
+    {
+     "path": "ActionSafeWidth",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "10"
+     ]
+    },
+    {
+     "path": "ActionSafeHeight",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "10"
+     ]
+    },
+    {
+     "path": "TitleSafeWidth",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "20"
+     ]
+    },
+    {
+     "path": "TitleSafeHeight",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "20"
+     ]
+    },
+    {
+     "path": "ShouldScaleMedia",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "EditingModeID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "guid": 24
+     }
+    },
+    {
+     "path": "PreviewFileFormatID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "guid": 24
+     }
+    },
+    {
+     "path": "UsePreviewCache",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 24
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "ColorAwareEffectsEnabled",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "RootProjectItem": {
+   "purpose": "\"Root Bin\"",
+   "explained_in": [
+    "02-document-structure.md",
+    "06-project-panel.md"
+   ],
+   "classids": {
+    "1c307a89-9318-47d7-a583-bf2553736543": 24
+   },
+   "versions": {
+    "1": 24
+   },
+   "count": 24,
+   "identity": {
+    "ObjectUID": 24
+   },
+   "referenced_by": {
+    "Project": 24
+   },
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "ProjectItem",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "ProjectItem/Node",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "ProjectItem/Node/Properties",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 24
+     }
+    },
+    {
+     "path": "ProjectItem/Node/Properties/ProjectViewState.ID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "guid": 24
+     }
+    },
+    {
+     "path": "ProjectItem/Node/Properties/list.view.expanded.state.<guid>",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "bool": 33
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "ProjectItem/Node/ID",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "int": 24
+     },
+     "values": [
+      "1000000"
+     ]
+    },
+    {
+     "path": "ProjectItem/Name",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "ProjectItemContainer",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "element": 23,
+      "empty": 1
+     }
+    },
+    {
+     "path": "ProjectItemContainer/Items",
+     "present": 23,
+     "of": 24,
+     "kinds": {
+      "element": 23
+     }
+    },
+    {
+     "path": "ProjectItemContainer/Items/Item@ObjectURef",
+     "present": 23,
+     "of": 24,
+     "kinds": {
+      "ref": 190
+     },
+     "targets": {
+      "ClipProjectItem": 145,
+      "FileProjectItem": 23,
+      "BinProjectItem": 22
+     }
+    },
+    {
+     "path": "ProjectItemContainer/Items/Item@Index",
+     "present": 23,
+     "of": 24,
+     "kinds": {
+      "index": 190
+     }
+    }
+   ]
+  },
+  "ScratchDiskSettings": {
+   "purpose": "scratch disk locations",
+   "explained_in": [],
+   "classids": {
+    "4c6ed82b-a81c-4df1-8bd0-750504c4b560": 24
+   },
+   "versions": {
+    "4": 24
+   },
+   "count": 24,
+   "identity": {
+    "ObjectID": 24
+   },
+   "referenced_by": {
+    "Project": 24
+   },
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "AudioPreviewLocation0",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "VideoPreviewLocation0",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "AutoSaveLocation0",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "CapturedVideoLocation0",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "TransferMediaLocation0",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "CapsuleMediaLocation0",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "DVDEncodingLocation0",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    },
+    {
+     "path": "CCLibrariesLocation0",
+     "present": 24,
+     "of": 24,
+     "kinds": {
+      "string": 24
+     }
+    }
+   ]
+  },
+  "SecondaryContent": {
+   "purpose": "per-channel ref from an AudioClip to its source",
+   "explained_in": [
+    "02-document-structure.md",
+    "09-track-items-and-links.md"
+   ],
+   "classids": {
+    "f9d004b5-cb04-4e2f-af6f-64fadc2c4be9": 462
+   },
+   "versions": {
+    "1": 462
+   },
+   "count": 462,
+   "identity": {
+    "ObjectID": 462
+   },
+   "referenced_by": {
+    "AudioClip": 462
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "Content@ObjectRef",
+     "present": 462,
+     "of": 462,
+     "kinds": {
+      "ref": 462
+     },
+     "targets": {
+      "AudioMediaSource": 366,
+      "AudioSequenceSource": 96
+     }
+    },
+    {
+     "path": "ChannelIndex",
+     "present": 462,
+     "of": 462,
+     "kinds": {
+      "int": 462
+     },
+     "values": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "Sequence": {
+   "purpose": "timeline: TrackGroups, Links, view state",
+   "explained_in": [
+    "02-document-structure.md",
+    "07-sequences.md",
+    "09-track-items-and-links.md"
+   ],
+   "classids": {
+    "6a15d903-8739-11d5-af2d-9b7855ad8974": 48
+   },
+   "versions": {
+    "12": 48
+   },
+   "count": 48,
+   "identity": {
+    "ObjectUID": 48
+   },
+   "referenced_by": {
+    "AudioSequenceSource": 48,
+    "VideoSequenceSource": 48
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "Node",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "Node/Properties",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "Node/Properties/MZ.InPoint",
+     "present": 5,
+     "of": 48,
+     "kinds": {
+      "int64": 5
+     }
+    },
+    {
+     "path": "Node/Properties/MZ.OutPoint",
+     "present": 5,
+     "of": 48,
+     "kinds": {
+      "int64": 5
+     }
+    },
+    {
+     "path": "Node/Properties/AMM.CurrentSolo",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "json": 48
+     }
+    },
+    {
+     "path": "Node/Properties/AM.TrackScrollPosition",
+     "present": 27,
+     "of": 48,
+     "kinds": {
+      "int": 27
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/AM.TrackVScrollPosition",
+     "present": 27,
+     "of": 48,
+     "kinds": {
+      "int": 27
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/MZ.EditLine",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 33,
+      "int64": 15
+     }
+    },
+    {
+     "path": "Node/Properties/MZ.Sequence.AudioTimeDisplayFormat",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "200"
+     ]
+    },
+    {
+     "path": "Node/Properties/MZ.Sequence.VideoTimeDisplayFormat",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "110"
+     ]
+    },
+    {
+     "path": "Node/Properties/MZ.WorkInPoint",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/MZ.WorkOutPoint",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int64": 48
+     }
+    },
+    {
+     "path": "Node/Properties/Monitor.ProgramZoomIn",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/Monitor.ProgramZoomOut",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int64": 28,
+      "int": 20
+     }
+    },
+    {
+     "path": "Node/Properties/TL.SQAVDividerPosition",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "float": 48
+     }
+    },
+    {
+     "path": "Node/Properties/TL.SQAudioVisibleBase",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/TL.SQDataVisibleBase",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/TL.SQHeaderWidth",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "204"
+     ]
+    },
+    {
+     "path": "Node/Properties/TL.SQHideShyTracks",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/TL.SQTimePerPixel",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "float": 48
+     }
+    },
+    {
+     "path": "Node/Properties/TL.SQVideoVisibleBase",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Node/Properties/TL.SQVisibleBaseTime",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 47,
+      "int64": 1
+     }
+    },
+    {
+     "path": "Node/Properties/MZ.Sequence.EditingModeGUID",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "guid": 48
+     }
+    },
+    {
+     "path": "Node/Properties/MZ.Sequence.PreviewUseMaxBitDepth",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "bool": 48
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/MZ.Sequence.PreviewUseMaxRenderQuality",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "bool": 48
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Node/Properties/MZ.Sequence.PreviewRenderingPresetPath",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "path": 48
+     }
+    },
+    {
+     "path": "Node/Properties/MZ.Sequence.PreviewRenderingPresetCodec",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int64": 48
+     }
+    },
+    {
+     "path": "Node/Properties/MZ.Sequence.PreviewRenderingClassID",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int64": 48
+     }
+    },
+    {
+     "path": "Node/Properties/MZ.Sequence.PreviewFrameSizeWidth",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "1920"
+     ]
+    },
+    {
+     "path": "Node/Properties/MZ.Sequence.PreviewFrameSizeHeight",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "1080"
+     ]
+    },
+    {
+     "path": "Node/Properties/HSL.TimelinePatchingAndTargeting.AudioPatches<guid>",
+     "present": 42,
+     "of": 48,
+     "kinds": {
+      "json": 42
+     }
+    },
+    {
+     "path": "Node/Properties/HSL.TimelinePatchingAndTargeting.VideoPatches<guid>",
+     "present": 40,
+     "of": 48,
+     "kinds": {
+      "json": 40
+     }
+    },
+    {
+     "path": "MarkerOwner",
+     "present": 12,
+     "of": 48,
+     "kinds": {
+      "element": 12
+     }
+    },
+    {
+     "path": "MarkerOwner/Markers@ObjectRef",
+     "present": 12,
+     "of": 48,
+     "kinds": {
+      "ref": 12
+     },
+     "targets": {
+      "Markers": 12
+     }
+    },
+    {
+     "path": "PersistentGroupContainer",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "PersistentGroupContainer/LinkContainer",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 28,
+      "empty": 20
+     }
+    },
+    {
+     "path": "PersistentGroupContainer/LinkContainer/Links",
+     "present": 28,
+     "of": 48,
+     "kinds": {
+      "element": 28
+     }
+    },
+    {
+     "path": "PersistentGroupContainer/LinkContainer/Links/Link@ObjectRef",
+     "present": 28,
+     "of": 48,
+     "kinds": {
+      "ref": 45
+     },
+     "targets": {
+      "Link": 45
+     }
+    },
+    {
+     "path": "PersistentGroupContainer/LinkContainer/Links/Link@Index",
+     "present": 28,
+     "of": 48,
+     "kinds": {
+      "index": 45
+     }
+    },
+    {
+     "path": "TrackGroups",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "TrackGroups/TrackGroup@Index",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "index": 144
+     }
+    },
+    {
+     "path": "TrackGroups/TrackGroup",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 144
+     }
+    },
+    {
+     "path": "TrackGroups/TrackGroup/First",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "guid": 144
+     }
+    },
+    {
+     "path": "TrackGroups/TrackGroup/Second@ObjectRef",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "ref": 144
+     },
+     "targets": {
+      "VideoTrackGroup": 48,
+      "AudioTrackGroup": 48,
+      "DataTrackGroup": 48
+     }
+    },
+    {
+     "path": "Name",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "string": 48
+     }
+    },
+    {
+     "path": "PreviewFormatIdentifier",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "guid": 48
+     }
+    }
+   ]
+  },
+  "StereoToStereoPanProcessor": {
+   "purpose": "track panner",
+   "explained_in": [
+    "08-tracks.md"
+   ],
+   "classids": {
+    "7bf86a01-efbe-11d5-abc4-c1ce2b1e9090": 170
+   },
+   "versions": {
+    "1": 170
+   },
+   "count": 170,
+   "identity": {
+    "ObjectID": 170
+   },
+   "referenced_by": {
+    "AudioClipTrack": 170
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "PanProcessor",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "element": 170
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "element": 170
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent/Component",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "element": 170
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent/Component/Params",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "element": 170
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent/Component/Params/Param@ObjectRef",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "ref": 170
+     },
+     "targets": {
+      "AudioComponentParam": 170
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent/Component/Params/Param@Index",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "index": 170
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent/Component/ID",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int64": 170
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent/AudioChannelLayout",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "json": 170
+     }
+    },
+    {
+     "path": "PanProcessor/AudioComponent/AudioComponentType",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int": 170
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "PanProcessor/AudioComponent/FrameRate",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int": 170
+     },
+     "values": [
+      "5292000"
+     ]
+    },
+    {
+     "path": "PanProcessor/AudioComponent/ChannelType",
+     "present": 170,
+     "of": 170,
+     "kinds": {
+      "int": 170
+     },
+     "values": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "SubClip": {
+   "purpose": "track item → (MasterClip, Clip); `Name` shown on the timeline",
+   "explained_in": [
+    "09-track-items-and-links.md",
+    "11-transitions.md"
+   ],
+   "classids": {
+    "e0c58dc9-dbdd-4166-aef7-5db7e3f22e84": 95
+   },
+   "versions": {
+    "6": 95
+   },
+   "count": 95,
+   "identity": {
+    "ObjectID": 95
+   },
+   "referenced_by": {
+    "VideoClipTrackItem": 50,
+    "AudioClipTrackItem": 45
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "Clip@ObjectRef",
+     "present": 95,
+     "of": 95,
+     "kinds": {
+      "ref": 95
+     },
+     "targets": {
+      "VideoClip": 50,
+      "AudioClip": 45
+     }
+    },
+    {
+     "path": "MasterClip@ObjectURef",
+     "present": 95,
+     "of": 95,
+     "kinds": {
+      "ref": 95
+     },
+     "targets": {
+      "MasterClip": 95
+     }
+    },
+    {
+     "path": "Name",
+     "present": 95,
+     "of": 95,
+     "kinds": {
+      "string": 95
+     }
+    },
+    {
+     "path": "OrigChGrp",
+     "present": 95,
+     "of": 95,
+     "kinds": {
+      "int": 95
+     },
+     "values": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "TranscriptClip": {
+   "purpose": "Speech-to-Text clip in a MasterClip",
+   "explained_in": [
+    "14-transcripts-and-captions.md"
+   ],
+   "classids": {
+    "9e0179bb-153c-4884-b34b-eb7082f34384": 5
+   },
+   "versions": {
+    "2": 5
+   },
+   "count": 5,
+   "identity": {
+    "ObjectID": 5
+   },
+   "referenced_by": {
+    "MasterClip": 5
+   },
+   "seen_in": [
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "DataClip",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "element": 5
+     }
+    },
+    {
+     "path": "DataClip/Clip",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "element": 5
+     }
+    },
+    {
+     "path": "DataClip/Clip/Source@ObjectRef",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "ref": 5
+     },
+     "targets": {
+      "DataMediaSource": 5
+     }
+    },
+    {
+     "path": "DataClip/Clip/ClipID",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "guid": 5
+     }
+    },
+    {
+     "path": "DataClip/Clip/InUse",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "bool": 5
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "TranscriptTextSegments@ObjectRef",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "ref": 5
+     },
+     "targets": {
+      "ExternallyProvidedTranscriptDocument": 5
+     }
+    }
+   ]
+  },
+  "VideoClip": {
+   "purpose": "video clip instance: Source, ClipID, In/OutPoint, label",
+   "explained_in": [
+    "04-object-graph-and-project.md",
+    "09-track-items-and-links.md"
+   ],
+   "classids": {
+    "9308dbef-2440-4acb-9ab2-953b9a4e82ec": 236
+   },
+   "versions": {
+    "11": 236
+   },
+   "count": 236,
+   "identity": {
+    "ObjectID": 236
+   },
+   "referenced_by": {
+    "MasterClip": 186,
+    "SubClip": 50
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "Clip",
+     "present": 236,
+     "of": 236,
+     "kinds": {
+      "element": 236
+     }
+    },
+    {
+     "path": "Clip/Node",
+     "present": 236,
+     "of": 236,
+     "kinds": {
+      "element": 236
+     }
+    },
+    {
+     "path": "Clip/Node/Properties",
+     "present": 236,
+     "of": 236,
+     "kinds": {
+      "element": 236
+     }
+    },
+    {
+     "path": "Clip/Node/Properties/asl.clip.label.color",
+     "present": 236,
+     "of": 236,
+     "kinds": {
+      "int": 236
+     },
+     "values": [
+      "19005",
+      "6769408",
+      "8851829",
+      "11405886"
+     ]
+    },
+    {
+     "path": "Clip/Node/Properties/BE.Prefs.StillImages.DefaultIsDropFrame",
+     "present": 46,
+     "of": 236,
+     "kinds": {
+      "bool": 46
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "Clip/Node/Properties/asl.clip.label.name",
+     "present": 236,
+     "of": 236,
+     "kinds": {
+      "string": 236
+     }
+    },
+    {
+     "path": "Clip/MarkerOwner",
+     "present": 188,
+     "of": 236,
+     "kinds": {
+      "element": 188
+     }
+    },
+    {
+     "path": "Clip/MarkerOwner/Markers@ObjectRef",
+     "present": 188,
+     "of": 236,
+     "kinds": {
+      "ref": 188
+     },
+     "targets": {
+      "Markers": 188
+     }
+    },
+    {
+     "path": "Clip/Source@ObjectRef",
+     "present": 236,
+     "of": 236,
+     "kinds": {
+      "ref": 236
+     },
+     "targets": {
+      "VideoMediaSource": 188,
+      "VideoSequenceSource": 48
+     }
+    },
+    {
+     "path": "Clip/ClipID",
+     "present": 236,
+     "of": 236,
+     "kinds": {
+      "guid": 236
+     }
+    },
+    {
+     "path": "Clip/InUse",
+     "present": 186,
+     "of": 236,
+     "kinds": {
+      "bool": 186
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Clip/PlaybackSpeed",
+     "present": 18,
+     "of": 236,
+     "kinds": {
+      "int": 18
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "Clip/InPoint",
+     "present": 96,
+     "of": 236,
+     "kinds": {
+      "int": 86,
+      "int64": 10
+     }
+    },
+    {
+     "path": "Clip/OutPoint",
+     "present": 96,
+     "of": 236,
+     "kinds": {
+      "int64": 96
+     }
+    }
+   ]
+  },
+  "VideoClipTrack": {
+   "purpose": "video track (V1, V2, …)",
+   "explained_in": [
+    "02-document-structure.md",
+    "08-tracks.md"
+   ],
+   "classids": {
+    "f68dcd81-8805-11d5-af2d-9bfa89d4ddd4": 144
+   },
+   "versions": {
+    "1": 144
+   },
+   "count": 144,
+   "identity": {
+    "ObjectUID": 144
+   },
+   "referenced_by": {
+    "VideoTrackGroup": 144
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "ClipTrack",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "element": 144
+     }
+    },
+    {
+     "path": "ClipTrack/Track",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "element": 144
+     }
+    },
+    {
+     "path": "ClipTrack/Track/Node",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "element": 144
+     }
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "element": 144
+     }
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/TL.SQTrackExpanded",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/TL.SQTrackExpandedHeight",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "41",
+      "144"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/MZ.SourceTrackState",
+     "present": 120,
+     "of": 144,
+     "kinds": {
+      "int": 120
+     },
+     "values": [
+      "0",
+      "2"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/MZ.SourceTrackNumber",
+     "present": 120,
+     "of": 144,
+     "kinds": {
+      "int": 120
+     },
+     "values": [
+      "0",
+      "-1"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/TL.SQTrackShy",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/MZ.TrackName",
+     "present": 9,
+     "of": 144,
+     "kinds": {
+      "string": 9
+     }
+    },
+    {
+     "path": "ClipTrack/Track/Node/Properties/MZ.TrackTargeted",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/ID",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/MediaType",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "guid": 144
+     }
+    },
+    {
+     "path": "ClipTrack/Track/Index",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "0",
+      "1",
+      "2"
+     ]
+    },
+    {
+     "path": "ClipTrack/Track/IsLocked",
+     "present": 8,
+     "of": 144,
+     "kinds": {
+      "bool": 8
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "ClipTrack/ClipItems",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "element": 144
+     }
+    },
+    {
+     "path": "ClipTrack/ClipItems/TrackItems",
+     "present": 33,
+     "of": 144,
+     "kinds": {
+      "element": 33
+     }
+    },
+    {
+     "path": "ClipTrack/ClipItems/TrackItems/TrackItem@ObjectRef",
+     "present": 33,
+     "of": 144,
+     "kinds": {
+      "ref": 50
+     },
+     "targets": {
+      "VideoClipTrackItem": 50
+     }
+    },
+    {
+     "path": "ClipTrack/ClipItems/TrackItems/TrackItem@Index",
+     "present": 33,
+     "of": 144,
+     "kinds": {
+      "index": 50
+     }
+    },
+    {
+     "path": "ClipTrack/ClipItems/MediaType",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "guid": 144
+     }
+    },
+    {
+     "path": "ClipTrack/ClipItems/Index",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "0",
+      "1",
+      "2"
+     ]
+    },
+    {
+     "path": "ClipTrack/TransitionItems",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "element": 144
+     }
+    },
+    {
+     "path": "ClipTrack/TransitionItems/MediaType",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "guid": 144
+     }
+    },
+    {
+     "path": "ClipTrack/TransitionItems/Index",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "0",
+      "1",
+      "2"
+     ]
+    }
+   ]
+  },
+  "VideoClipTrackItem": {
+   "purpose": "video item on a track: Start/End, component chain",
+   "explained_in": [
+    "09-track-items-and-links.md"
+   ],
+   "classids": {
+    "368b0406-29e3-4923-9fcd-094fbf9a1089": 50
+   },
+   "versions": {
+    "8": 50
+   },
+   "count": 50,
+   "identity": {
+    "ObjectID": 50
+   },
+   "referenced_by": {
+    "VideoClipTrack": 50,
+    "Link": 45
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "ClipTrackItem",
+     "present": 50,
+     "of": 50,
+     "kinds": {
+      "element": 50
+     }
+    },
+    {
+     "path": "ClipTrackItem/ComponentOwner",
+     "present": 50,
+     "of": 50,
+     "kinds": {
+      "element": 50
+     }
+    },
+    {
+     "path": "ClipTrackItem/ComponentOwner/Components@ObjectRef",
+     "present": 50,
+     "of": 50,
+     "kinds": {
+      "ref": 50
+     },
+     "targets": {
+      "VideoComponentChain": 50
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem",
+     "present": 50,
+     "of": 50,
+     "kinds": {
+      "element": 50
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node",
+     "present": 2,
+     "of": 50,
+     "kinds": {
+      "element": 2
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties",
+     "present": 2,
+     "of": 50,
+     "kinds": {
+      "element": 2
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/monitor.edit.time",
+     "present": 2,
+     "of": 50,
+     "kinds": {
+      "int64": 2
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/monitor.take.video.linked",
+     "present": 2,
+     "of": 50,
+     "kinds": {
+      "bool": 2
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/monitor.zoom.in.time",
+     "present": 2,
+     "of": 50,
+     "kinds": {
+      "int": 2
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Node/Properties/monitor.zoom.out.time",
+     "present": 2,
+     "of": 50,
+     "kinds": {
+      "int64": 2
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/Start",
+     "present": 22,
+     "of": 50,
+     "kinds": {
+      "int64": 22
+     }
+    },
+    {
+     "path": "ClipTrackItem/TrackItem/End",
+     "present": 50,
+     "of": 50,
+     "kinds": {
+      "int64": 50
+     }
+    },
+    {
+     "path": "ClipTrackItem/SubClip@ObjectRef",
+     "present": 50,
+     "of": 50,
+     "kinds": {
+      "ref": 50
+     },
+     "targets": {
+      "SubClip": 50
+     }
+    },
+    {
+     "path": "ToneMapSettings",
+     "present": 50,
+     "of": 50,
+     "kinds": {
+      "json": 50
+     }
+    },
+    {
+     "path": "FrameRect",
+     "present": 50,
+     "of": 50,
+     "kinds": {
+      "csv-numbers": 50
+     }
+    },
+    {
+     "path": "PixelAspectRatio",
+     "present": 50,
+     "of": 50,
+     "kinds": {
+      "csv-numbers": 50
+     }
+    }
+   ]
+  },
+  "VideoCompileSettings": {
+   "purpose": "video side of a compile setting",
+   "explained_in": [],
+   "classids": {
+    "db372db5-7de2-4d3c-98ae-f42659d77b22": 144
+   },
+   "versions": {
+    "9": 144
+   },
+   "count": 144,
+   "identity": {
+    "ObjectID": 144
+   },
+   "referenced_by": {
+    "CompileSettings": 120,
+    "ProjectSettings": 24
+   },
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "VideoSettings@ObjectRef",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "ref": 144
+     },
+     "targets": {
+      "VideoSettings": 144
+     }
+    },
+    {
+     "path": "Compressor",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int64": 144
+     }
+    },
+    {
+     "path": "VideoCompilerClassIDFourCC",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int64": 144
+     }
+    },
+    {
+     "path": "VideoFileTypeFourCC",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int64": 144
+     }
+    },
+    {
+     "path": "Depth",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "24"
+     ]
+    },
+    {
+     "path": "RenderDepth",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "Aspect43",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "bool": 144
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "Quality",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "100"
+     ]
+    },
+    {
+     "path": "UseDataRate",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "bool": 144
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "DataRate",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "3500"
+     ]
+    },
+    {
+     "path": "ForceRecompress",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "bool": 144
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "ForceRecompressValue",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "Deinterlace",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "bool": 144
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "IgnoreVideoFilters",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "bool": 144
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "OptimizeStills",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "bool": 144
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "FramesAtMarkers",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "bool": 144
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "RealTimePreview",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "bool": 144
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "VideoFieldType",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "DoKeyframeEveryNFrames",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "bool": 144
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "DoKeyframeEveryNFramesValue",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "path": "AddKeyframesAtMarkers",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "bool": 144
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "AddKeyframesAtEdits",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "bool": 144
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "RelativeFrameSize",
+     "present": 144,
+     "of": 144,
+     "kinds": {
+      "int": 144
+     },
+     "values": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "VideoComponentChain": {
+   "purpose": "video effect stack (track item or track group)",
+   "explained_in": [
+    "12-effects-and-keyframes.md"
+   ],
+   "classids": {
+    "0970e08a-f58f-4108-b29a-1a717b8e12e2": 98
+   },
+   "versions": {
+    "3": 98
+   },
+   "count": 98,
+   "identity": {
+    "ObjectID": 98
+   },
+   "referenced_by": {
+    "VideoClipTrackItem": 50,
+    "VideoTrackGroup": 48
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "DefaultMotion",
+     "present": 50,
+     "of": 98,
+     "kinds": {
+      "bool": 50
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "DefaultOpacity",
+     "present": 50,
+     "of": 98,
+     "kinds": {
+      "bool": 50
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "DefaultMotionComponentID",
+     "present": 50,
+     "of": 98,
+     "kinds": {
+      "int": 50
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "DefaultOpacityComponentID",
+     "present": 50,
+     "of": 98,
+     "kinds": {
+      "int": 50
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "ComponentChain",
+     "present": 98,
+     "of": 98,
+     "kinds": {
+      "empty": 53,
+      "element": 45
+     }
+    },
+    {
+     "path": "ComponentChain/Components",
+     "present": 5,
+     "of": 98,
+     "kinds": {
+      "element": 5
+     }
+    },
+    {
+     "path": "ComponentChain/Components/Component@ObjectRef",
+     "present": 5,
+     "of": 98,
+     "kinds": {
+      "ref": 5
+     },
+     "targets": {
+      "VideoFilterComponent": 5
+     }
+    },
+    {
+     "path": "ComponentChain/Components/Component@Index",
+     "present": 5,
+     "of": 98,
+     "kinds": {
+      "index": 5
+     }
+    },
+    {
+     "path": "ComponentChain/Node",
+     "present": 41,
+     "of": 98,
+     "kinds": {
+      "element": 41
+     }
+    },
+    {
+     "path": "ComponentChain/Node/Properties",
+     "present": 41,
+     "of": 98,
+     "kinds": {
+      "element": 41
+     }
+    },
+    {
+     "path": "ComponentChain/Node/Properties/MZ.ComponentChain.ActiveComponentID",
+     "present": 41,
+     "of": 98,
+     "kinds": {
+      "int": 41
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "ComponentChain/Node/Properties/MZ.ComponentChain.ActiveComponentParamIndex",
+     "present": 41,
+     "of": 98,
+     "kinds": {
+      "int64": 41
+     }
+    }
+   ]
+  },
+  "VideoComponentParam": {
+   "purpose": "video effect parameter: float, bool, enum or colour (Scale, Rotation, Opacity, Skew, …)",
+   "explained_in": [
+    "02-document-structure.md",
+    "12-effects-and-keyframes.md"
+   ],
+   "classids": {
+    "cc12343e-f113-4d3b-ae05-b287db77d461": 10,
+    "fe47129e-6c94-4fc0-95d5-c056a517aaf3": 35,
+    "6e02e8bb-2569-46b2-8ab1-4ab11c43e9c8": 5
+   },
+   "versions": {
+    "10": 50
+   },
+   "count": 50,
+   "identity": {
+    "ObjectID": 50
+   },
+   "referenced_by": {
+    "VideoFilterComponent": 50
+   },
+   "seen_in": [
+    "12",
+    "13",
+    "14",
+    "15",
+    "16"
+   ],
+   "fields": [
+    {
+     "path": "Name",
+     "present": 40,
+     "of": 50,
+     "kinds": {
+      "string": 40
+     }
+    },
+    {
+     "path": "DiscontinuousInterpolate",
+     "present": 5,
+     "of": 50,
+     "kinds": {
+      "bool": 5
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "ParameterControlType",
+     "present": 10,
+     "of": 50,
+     "kinds": {
+      "int": 10
+     },
+     "values": [
+      "3"
+     ]
+    },
+    {
+     "path": "LowerUIBound",
+     "present": 10,
+     "of": 50,
+     "kinds": {
+      "int": 10
+     },
+     "values": [
+      "-200"
+     ]
+    },
+    {
+     "path": "ParameterID",
+     "present": 50,
+     "of": 50,
+     "kinds": {
+      "int": 50
+     }
+    },
+    {
+     "path": "UpperUIBound",
+     "present": 10,
+     "of": 50,
+     "kinds": {
+      "int": 10
+     },
+     "values": [
+      "200"
+     ]
+    },
+    {
+     "path": "StartKeyframe",
+     "present": 50,
+     "of": 50,
+     "kinds": {
+      "keyframes": 50
+     }
+    },
+    {
+     "path": "CurrentValue",
+     "present": 5,
+     "of": 50,
+     "kinds": {
+      "int": 5
+     },
+     "values": [
+      "240"
+     ]
+    },
+    {
+     "path": "LowerBound",
+     "present": 40,
+     "of": 50,
+     "kinds": {
+      "int": 40
+     },
+     "values": [
+      "0",
+      "-70",
+      "-30000",
+      "-32768"
+     ]
+    },
+    {
+     "path": "UpperBound",
+     "present": 40,
+     "of": 50,
+     "kinds": {
+      "int": 40
+     },
+     "values": [
+      "1",
+      "70",
+      "100",
+      "360",
+      "30000",
+      "32767"
+     ]
+    }
+   ]
+  },
+  "VideoFilterComponent": {
+   "purpose": "one effect; `MatchName` e.g. `AE.ADBE Geometry2` (Transform)",
+   "explained_in": [
+    "12-effects-and-keyframes.md"
+   ],
+   "classids": {
+    "d10da199-beea-4dd1-b941-ed3a78766d50": 5
+   },
+   "versions": {
+    "9": 5
+   },
+   "count": 5,
+   "identity": {
+    "ObjectID": 5
+   },
+   "referenced_by": {
+    "VideoComponentChain": 5
+   },
+   "seen_in": [
+    "12",
+    "13",
+    "14",
+    "15",
+    "16"
+   ],
+   "fields": [
+    {
+     "path": "Component",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "element": 5
+     }
+    },
+    {
+     "path": "Component/Params",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "element": 5
+     }
+    },
+    {
+     "path": "Component/Params/Param@ObjectRef",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "ref": 60
+     },
+     "targets": {
+      "VideoComponentParam": 50,
+      "PointComponentParam": 10
+     }
+    },
+    {
+     "path": "Component/Params/Param@Index",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "index": 60
+     }
+    },
+    {
+     "path": "Component/ID",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "int": 5
+     },
+     "values": [
+      "3"
+     ]
+    },
+    {
+     "path": "Component/DisplayName",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "string": 5
+     }
+    },
+    {
+     "path": "VideoFilterType",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "int": 5
+     },
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "path": "MatchName",
+     "present": 5,
+     "of": 5,
+     "kinds": {
+      "string": 5
+     }
+    }
+   ]
+  },
+  "VideoMediaSource": {
+   "purpose": "Clip source → Media (video)",
+   "explained_in": [
+    "06-project-panel.md"
+   ],
+   "classids": {
+    "e64ddf74-8fac-4682-8aa8-0e0ca2248949": 138
+   },
+   "versions": {
+    "2": 138
+   },
+   "count": 138,
+   "identity": {
+    "ObjectID": 138
+   },
+   "referenced_by": {
+    "VideoClip": 188
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "MediaSource",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "element": 138
+     }
+    },
+    {
+     "path": "MediaSource/Content",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "empty": 138
+     }
+    },
+    {
+     "path": "MediaSource/Media@ObjectURef",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "ref": 138
+     },
+     "targets": {
+      "Media": 138
+     }
+    },
+    {
+     "path": "OriginalDuration",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "int64": 138
+     }
+    }
+   ]
+  },
+  "VideoSequenceSource": {
+   "purpose": "Clip source → Sequence (a sequence used as a clip), video",
+   "explained_in": [
+    "06-project-panel.md"
+   ],
+   "classids": {
+    "4752dfa9-7a7e-4a3b-a25b-cafde1a8d036": 48
+   },
+   "versions": {
+    "3": 48
+   },
+   "count": 48,
+   "identity": {
+    "ObjectID": 48
+   },
+   "referenced_by": {
+    "VideoClip": 48
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "SequenceSource",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "SequenceSource/Content",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "empty": 48
+     }
+    },
+    {
+     "path": "SequenceSource/Sequence@ObjectURef",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "ref": 48
+     },
+     "targets": {
+      "Sequence": 48
+     }
+    },
+    {
+     "path": "OriginalDuration",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int64": 28,
+      "int": 20
+     }
+    }
+   ]
+  },
+  "VideoSettings": {
+   "purpose": "video settings shell owned by project/compile settings",
+   "explained_in": [
+    "04-object-graph-and-project.md"
+   ],
+   "classids": {
+    "58474264-30c4-43a2-bba5-dc0812df8a3a": 168
+   },
+   "versions": {
+    "10": 168
+   },
+   "count": 168,
+   "identity": {
+    "ObjectID": 168
+   },
+   "referenced_by": {
+    "VideoCompileSettings": 144,
+    "ProjectSettings": 24
+   },
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": []
+  },
+  "VideoStream": {
+   "purpose": "duration, fps, size, codec FourCC, alpha",
+   "explained_in": [
+    "06-project-panel.md"
+   ],
+   "classids": {
+    "a36e4719-3ec6-4a0c-ab11-8b4aab377aa5": 138
+   },
+   "versions": {
+    "23": 138
+   },
+   "count": 138,
+   "identity": {
+    "ObjectID": 138
+   },
+   "referenced_by": {
+    "Media": 138
+   },
+   "seen_in": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "Duration",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "int64": 138
+     }
+    },
+    {
+     "path": "IgnoreAlpha",
+     "present": 92,
+     "of": 138,
+     "kinds": {
+      "bool": 92
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "CodecType",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "int64": 138
+     }
+    },
+    {
+     "path": "IsStill",
+     "present": 46,
+     "of": 138,
+     "kinds": {
+      "bool": 46
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "OriginalColorSpace",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "json": 138
+     }
+    },
+    {
+     "path": "FieldTypeIsUncertain",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "bool": 138
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "OriginalImageOrientationType",
+     "present": 92,
+     "of": 138,
+     "kinds": {
+      "int": 92
+     },
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "path": "FrameRate",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "int64": 138
+     }
+    },
+    {
+     "path": "FrameRect",
+     "present": 138,
+     "of": 138,
+     "kinds": {
+      "csv-numbers": 138
+     }
+    },
+    {
+     "path": "AlphaType",
+     "present": 115,
+     "of": 138,
+     "kinds": {
+      "int": 115
+     },
+     "values": [
+      "1",
+      "3"
+     ]
+    }
+   ]
+  },
+  "VideoTrackGroup": {
+   "purpose": "video tracks, sequence FrameRate/FrameRect",
+   "explained_in": [
+    "07-sequences.md",
+    "09-track-items-and-links.md"
+   ],
+   "classids": {
+    "9e9abf7a-0918-49c2-91ae-991b5dde77bb": 48
+   },
+   "versions": {
+    "13": 48
+   },
+   "count": 48,
+   "identity": {
+    "ObjectID": 48
+   },
+   "referenced_by": {
+    "Sequence": 48
+   },
+   "seen_in": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": [
+    {
+     "path": "TrackGroup",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "TrackGroup/Tracks",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "TrackGroup/Tracks/Track@ObjectURef",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "ref": 144
+     },
+     "targets": {
+      "VideoClipTrack": 144
+     }
+    },
+    {
+     "path": "TrackGroup/Tracks/Track@Index",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "index": 144
+     }
+    },
+    {
+     "path": "TrackGroup/NextTrackID",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int": 48
+     },
+     "values": [
+      "4"
+     ]
+    },
+    {
+     "path": "TrackGroup/FrameRate",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "int64": 48
+     }
+    },
+    {
+     "path": "ColorManagementSettings",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "json": 48
+     }
+    },
+    {
+     "path": "AutoInputGamutCompressionEnabled",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "bool": 48
+     },
+     "values": [
+      "true"
+     ]
+    },
+    {
+     "path": "ToneMappingDesaturation",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "float": 48
+     }
+    },
+    {
+     "path": "IsGraphicsWhiteSameAsProject",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "bool": 48
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "IsColorAwareEffectsEnabledSameAsProject",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "bool": 48
+     },
+     "values": [
+      "false"
+     ]
+    },
+    {
+     "path": "FrameRect",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "csv-numbers": 48
+     }
+    },
+    {
+     "path": "OutputColorSpace",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "json": 48
+     }
+    },
+    {
+     "path": "ComponentOwner",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "element": 48
+     }
+    },
+    {
+     "path": "ComponentOwner/Components@ObjectRef",
+     "present": 48,
+     "of": 48,
+     "kinds": {
+      "ref": 48
+     },
+     "targets": {
+      "VideoComponentChain": 48
+     }
+    }
+   ]
+  },
+  "WorkspaceSettings": {
+   "purpose": "workspace state",
+   "explained_in": [],
+   "classids": {
+    "c4372273-e1aa-4683-98aa-a2ceadf3066c": 24
+   },
+   "versions": {
+    "1": 24
+   },
+   "count": 24,
+   "identity": {
+    "ObjectID": 24
+   },
+   "referenced_by": {
+    "Project": 24
+   },
+   "seen_in": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23"
+   ],
+   "fields": []
+  }
+ }
+}

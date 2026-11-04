@@ -1,0 +1,20 @@
+{
+  "name": "adobe-project-skills",
+  "owner": { "name": "Kyle Tryon" },
+  "metadata": {
+    "description": "Unofficial Agent Skills that read and edit Adobe project files directly (Premiere Pro .prproj today), backed by a reverse-engineered format spec proven against a public demo project.",
+    "version": "3.0"
+  },
+  "plugins": [
+    {
+      "name": "premiere-pro-projects",
+      "source": "./skills/premiere-pro-projects",
+      "description": "Read and edit Adobe Premiere Pro .prproj files: media, bins, sequences, cut lists, markers, transcripts and captions, splits, trims, ripple deletes, fades and Transform keyframes.",
+      "version": "3.0",
+      "license": "MIT",
+      "keywords": ["premiere-pro", "prproj", "video-editing", "adobe", "captions", "transcript"],
+      "category": "media",
+      "strict": false
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+{
+ "iteration": 1,
+ "date": "2026-11-04",
+ "model": "claude-sonnet-5-5",
+ "judge_model": "claude-sonnet-5-5",
+ "skill_version": "3.0",
+ "commit": null,
+ "dirty": false,
+ "skill_hash": "a6733c50dd63",
+ "runs_per_arm": 1,
+ "cases_run": "all",
+ "claude_version": "2.1.318 (Claude Code)",
+ "cases": {
+  "pip-slide-in": {
+   "id": 1,
+   "with_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 33.2,
+    "cost_usd": 0.0884,
+    "edit": {
+     "passed": 5,
+     "total": 5,
+     "pass_rate": 1.0
+    },
+    "habit": {
+     "passed": 2,
+     "total": 2,
+     "pass_rate": 1.0
+    },
+    "failed_keys": []
+   },
+   "without_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 42.3,
+    "cost_usd": 0.1698,
+    "edit": {
+     "passed": 1,
+     "total": 5,
+     "pass_rate": 0.2
+    },
+    "habit": {
+     "passed": 2,
+     "total": 2,
+     "pass_rate": 1.0
+    },
+    "failed_keys": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ]
+   }
+  },
+  "trimmed-head-slide": {
+   "id": 2,
+   "with_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 24.4,
+    "cost_usd": 0.0796,
+    "edit": {
+     "passed": 5,
+     "total": 5,
+     "pass_rate": 1.0
+    },
+    "habit": {
+     "passed": 2,
+     "total": 2,
+     "pass_rate": 1.0
+    },
+    "failed_keys": []
+   },
+   "without_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 55.6,
+    "cost_usd": 0.2146,
+    "edit": {
+     "passed": 5,
+     "total": 5,
+     "pass_rate": 1.0
+    },
+    "habit": {
+     "passed": 1,
+     "total": 2,
+     "pass_rate": 0.5
+    },
+    "failed_keys": [
+     "c1"
+    ]
+   }
+  },
+  "split-interview": {
+   "id": 3,
+   "with_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 9.7,
+    "cost_usd": 0.0678,
+    "edit": {
+     "passed": 5,
+     "total": 5,
+     "pass_rate": 1.0
+    },
+    "habit": {
+     "passed": 2,
+     "total": 2,
+     "pass_rate": 1.0
+    },
+    "failed_keys": []
+   },
+   "without_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 49.1,
+    "cost_usd": 0.1928,
+    "edit": {
+     "passed": 4,
+     "total": 5,
+     "pass_rate": 0.8
+    },
+    "habit": {
+     "passed": 1,
+     "total": 2,
+     "pass_rate": 0.5
+    },
+    "failed_keys": [
+     "2",
+     "c1"
+    ]
+   }
+  },
+  "label-while-open": {
+   "id": 4,
+   "with_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 20.4,
+    "cost_usd": 0.0622,
+    "edit": {
+     "passed": 2,
+     "total": 2,
+     "pass_rate": 1.0
+    },
+    "habit": {
+     "passed": 3,
+     "total": 3,
+     "pass_rate": 1.0
+    },
+    "failed_keys": []
+   },
+   "without_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 70.2,
+    "cost_usd": 0.1854,
+    "edit": {
+     "passed": 1,
+     "total": 2,
+     "pass_rate": 0.5
+    },
+    "habit": {
+     "passed": 3,
+     "total": 3,
+     "pass_rate": 1.0
+    },
+    "failed_keys": [
+     "2"
+    ]
+   }
+  },
+  "filler-markers": {
+   "id": 5,
+   "with_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 57.2,
+    "cost_usd": 0.1331,
+    "edit": {
+     "passed": 3,
+     "total": 4,
+     "pass_rate": 0.75
+    },
+    "habit": {
+     "passed": 2,
+     "total": 2,
+     "pass_rate": 1.0
+    },
+    "failed_keys": [
+     "1"
+    ]
+   },
+   "without_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 70.4,
+    "cost_usd": 0.2666,
+    "edit": {
+     "passed": 3,
+     "total": 4,
+     "pass_rate": 0.75
+    },
+    "habit": {
+     "passed": 1,
+     "total": 2,
+     "pass_rate": 0.5
+    },
+    "failed_keys": [
+     "1",
+     "c1"
+    ]
+   }
+  },
+  "transcript-cut": {
+   "id": 6,
+   "with_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 42.1,
+    "cost_usd": 0.1019,
+    "edit": {
+     "passed": 5,
+     "total": 6,
+     "pass_rate": 0.833
+    },
+    "habit": {
+     "passed": 2,
+     "total": 2,
+     "pass_rate": 1.0
+    },
+    "failed_keys": [
+     "1"
+    ]
+   },
+   "without_skill": {
+    "runs": 1,
+    "clean_runs": 0,
+    "unclean_runs": 1,
+    "mean_seconds": 170.0,
+    "cost_usd": 0.53,
+    "edit": {
+     "passed": 0,
+     "total": 0,
+     "pass_rate": null
+    },
+    "habit": {
+     "passed": 0,
+     "total": 0,
+     "pass_rate": null
+    },
+    "failed_keys": []
+   }
+  },
+  "captions-after-cut": {
+   "id": 7,
+   "with_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 15.4,
+    "cost_usd": 0.0782,
+    "edit": {
+     "passed": 5,
+     "total": 6,
+     "pass_rate": 0.833
+    },
+    "habit": {
+     "passed": 2,
+     "total": 2,
+     "pass_rate": 1.0
+    },
+    "failed_keys": [
+     "0"
+    ]
+   },
+   "without_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 111.2,
+    "cost_usd": 0.3314,
+    "edit": {
+     "passed": 5,
+     "total": 6,
+     "pass_rate": 0.833
+    },
+    "habit": {
+     "passed": 2,
+     "total": 2,
+     "pass_rate": 1.0
+    },
+    "failed_keys": [
+     "0"
+    ]
+   }
+  },
+  "rename-speakers": {
+   "id": 8,
+   "with_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 22.1,
+    "cost_usd": 0.0654,
+    "edit": {
+     "passed": 4,
+     "total": 6,
+     "pass_rate": 0.667
+    },
+    "habit": {
+     "passed": 2,
+     "total": 2,
+     "pass_rate": 1.0
+    },
+    "failed_keys": [
+     "1",
+     "2"
+    ]
+   },
+   "without_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 64.5,
+    "cost_usd": 0.1323,
+    "edit": {
+     "passed": 6,
+     "total": 6,
+     "pass_rate": 1.0
+    },
+    "habit": {
+     "passed": 2,
+     "total": 2,
+     "pass_rate": 1.0
+    },
+    "failed_keys": []
+   }
+  },
+  "crossfade-no-handles": {
+   "id": 9,
+   "with_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 10.7,
+    "cost_usd": 0.0684,
+    "edit": {
+     "passed": 4,
+     "total": 4,
+     "pass_rate": 1.0
+    },
+    "habit": {
+     "passed": 3,
+     "total": 3,
+     "pass_rate": 1.0
+    },
+    "failed_keys": []
+   },
+   "without_skill": {
+    "runs": 1,
+    "clean_runs": 1,
+    "unclean_runs": 0,
+    "mean_seconds": 36.2,
+    "cost_usd": 0.1313,
+    "edit": {
+     "passed": 4,
+     "total": 4,
+     "pass_rate": 1.0
+    },
+    "habit": {
+     "passed": 3,
+     "total": 3,
+     "pass_rate": 1.0
+    },
+    "failed_keys": []
+   }
+  }
+ },
+ "totals": {
+  "with_skill": {
+   "unclean_runs": 0,
+   "runs": 9,
+   "mean_seconds": 26.1,
+   "cost_usd": 0.745,
+   "edit": {
+    "passed": 38,
+    "total": 43,
+    "pass_rate": 0.884
+   },
+   "habit": {
+    "passed": 20,
+    "total": 20,
+    "pass_rate": 1.0
+   }
+  },
+  "without_skill": {
+   "unclean_runs": 1,
+   "runs": 9,
+   "mean_seconds": 74.4,
+   "cost_usd": 2.1542,
+   "edit": {
+    "passed": 29,
+    "total": 37,
+    "pass_rate": 0.784
+   },
+   "habit": {
+    "passed": 15,
+    "total": 18,
+    "pass_rate": 0.833
+   }
+  }
+ }
+}

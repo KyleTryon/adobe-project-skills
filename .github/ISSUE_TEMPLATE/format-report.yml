@@ -1,0 +1,33 @@
+name: Format report
+description: Premiere wrote something the skill doesn't know, or a rule doesn't hold for your project
+labels: [format]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! Please **don't attach a real project**: it contains your media paths, user name and often full transcripts. `schema_dump.py` output carries only structure. See [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md).
+  - type: input
+    id: version
+    attributes:
+      label: Premiere Pro version and OS
+      placeholder: "Premiere Pro 26.5, macOS 26.1"
+    validations:
+      required: true
+  - type: textarea
+    id: action
+    attributes:
+      label: What you did in Premiere
+      description: The single action, or the feature your project uses that the demo project doesn't (nesting, speed change, an effect, …).
+    validations:
+      required: true
+  - type: textarea
+    id: validate
+    attributes:
+      label: "`prproj.py validate YOUR.prproj` output"
+      render: text
+  - type: textarea
+    id: schema
+    attributes:
+      label: "`schema_dump.py --class NAME YOUR.prproj` (or `--json`) output"
+      description: Structure only (classes, paths, value kinds); no names, paths or text.
+      render: text

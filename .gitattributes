@@ -1,0 +1,14 @@
+* text=auto eol=lf
+
+# Premiere projects are gzip; diff them with `prproj.py diff`, not git
+*.prproj binary
+*.mp4 binary
+*.mov binary
+*.wav binary
+*.png binary
+*.jpg binary
+
+# keep GitHub's language stats about the code, not the generated catalogue or fixtures
+skills/*/references/prproj-schema.json linguist-generated
+skills/*/references/prproj-classes.md linguist-generated
+fixtures/** linguist-vendored

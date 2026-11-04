@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How to contribute a step or a rule
+    url: https://github.com/KyleTryon/adobe-project-skills/blob/main/CONTRIBUTING.md
+    about: Recording steps, proving rules, and sending format reports without sharing your projects.

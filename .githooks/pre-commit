@@ -1,0 +1,31 @@
+#!/bin/sh
+# Blocks commits that would leak personal data or break the proof rules.
+# Enable once per clone:  git config core.hooksPath .githooks
+# Skip in an emergency:   git commit --no-verify   (CI runs the same checks)
+cd "$(git rev-parse --show-toplevel)" || exit 1
+staged=$(git diff --cached --name-only --diff-filter=ACMR)
+[ -z "$staged" ] && exit 0
+fail=0
+
+# 1. files that must never be committed
+bad=$(printf '%s\n' "$staged" | grep -E '\.prin$|Auto-Save/|-workspace/|__pycache__|\.pyc$|\.DS_Store$|^\.private-words$')
+if [ -n "$bad" ]; then
+  echo "pre-commit: these must not be committed:"; printf '  %s\n' $bad; fail=1
+fi
+
+# 2. home-folder paths in projects (the scrubber fixes them)
+prproj=$(printf '%s\n' "$staged" | grep -E '\.prproj$')
+if [ -n "$prproj" ] && ! python3 -I tools/premiere-pro/scrub_steps.py --check $prproj; then
+  echo "pre-commit: run  python3 -I tools/premiere-pro/scrub_steps.py  then git add the steps again"; fail=1
+fi
+
+# 3. anything else personal: your user name, volumes, git name/email, .private-words
+python3 -I tools/check_private.py $staged || fail=1
+
+# 4. quick proof checks when docs, rules or scripts change (the full suite runs on push and in CI)
+if printf '%s\n' "$staged" | grep -qE '\.(md|py)$'; then
+  python3 -I tests/check_links.py || fail=1
+  out=$(python3 -I tests/premiere-pro/test_rules.py 2>&1) || { printf '%s\n' "$out" | grep -E '^FAIL'; fail=1; }
+fi
+
+[ $fail -eq 0 ] || { echo "pre-commit: commit blocked (see above)"; exit 1; }

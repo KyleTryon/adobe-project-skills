@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# never commit real projects or media used for testing
+*.prproj
+*.prproj.xml
+*.prin
+*.mp4
+*.mov
+*.wav
+# ...except the anonymised eval fixtures and the scrubbed recorded steps
+!skills/*/evals/files/*.prproj
+!fixtures/*/steps/*.prproj
+
+# eval runs (results, transcripts, scratch)
+*-workspace/
+
+# demo project media (generated, licence-free)
+!fixtures/*/media/*.mp4
+!fixtures/*/media/*.mov
+!fixtures/*/media/*.wav
+
+# Premiere auto-save folders
+Adobe Premiere Pro Auto-Save/
+
+
+# local list of words tools/check_private.py blocks (never commit it)
+.private-words
