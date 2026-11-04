@@ -68,7 +68,8 @@ Iteration 2, clean runs only. Failed assertions are listed by key: a number is t
 
 | Iteration | Date | Description version | Train pass | Validation pass | Notes |
 |---|---|---|---|---|---|
-| — | — | — | — | — | Not run yet |
+| 4 | 2026-11-04 | 3.0 (description 1b8c1ed2) | 16/17 | 11/11 | claude-sonnet-5-5; misses: "convert this SRT file to WebVTT" (3/3, shouldn't trigger) |
+| 5 | 2026-11-04 | 3.1 (description 66f69cd8) | 17/17 | 10/11 | claude-sonnet-5-5; misses: "I need a Final Cut Pro XML of this edit decision list" (2/3, shouldn't trigger) |
 
 Each query runs 3 times; it passes when it triggers more than half the time (should trigger) or less than half (shouldn't).
 

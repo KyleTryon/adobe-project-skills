@@ -2,7 +2,7 @@
 
 | Skill | App | Status |
 |---|---|---|
-| [`premiere-pro-projects`](premiere-pro-projects/SKILL.md) | Premiere Pro | v3.0, usable; roadmap below |
+| [`premiere-pro-projects`](premiere-pro-projects/SKILL.md) | Premiere Pro | v3.1, usable; roadmap below |
 
 Each skill folder is self-contained: `SKILL.md`, `scripts/`, `references/` and `evals/`. Copy the folder into your agent's skills directory to install it (see the [repo README](../README.md)). `<skill>-workspace/` folders next to them hold local eval runs and are git-ignored.
 

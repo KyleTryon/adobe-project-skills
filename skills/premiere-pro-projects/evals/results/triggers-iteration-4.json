@@ -1,0 +1,179 @@
+{
+ "iteration": 4,
+ "model": "claude-sonnet-5-5",
+ "description_hash": "1b8c1ed2",
+ "results": {
+  "train": [
+   {
+    "query": "can you look at ~/Videos/launch/launch_v3.prproj and tell me which clips on V2 still have the old logo render",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "the code panel graphic at 1:12 in my Edit sequence just pops on, make it slide up from the bottom over about half a second",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "I ran speech to text in premiere on the interview, can you pull the transcript out and give me an srt of just what's left in the cut",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "before I start cutting, duplicate my main sequence as a backup inside the project",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "music is way too loud under the voiceover between 0:40 and 1:05 in my premier project, can you duck it",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "label every clip in the Cut where I stumble over a word so I can review them later",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "write an ffmpeg command to trim the first 3 seconds off interview.mp4",
+    "should_trigger": false,
+    "hits": 0,
+    "passed": true
+   },
+   {
+    "query": "how do I turn on motion blur for the Transform effect in Premiere Pro? where's the checkbox",
+    "should_trigger": false,
+    "hits": 0,
+    "passed": true
+   },
+   {
+    "query": "my DaVinci Resolve timeline has gaps everywhere, can you help me close them in the .drp",
+    "should_trigger": false,
+    "hits": 0,
+    "passed": true
+   },
+   {
+    "query": "make me a lower third animation in After Effects with my name and title",
+    "should_trigger": false,
+    "hits": 0,
+    "passed": true
+   },
+   {
+    "query": "what export settings should I use in Media Encoder for a 4K YouTube upload",
+    "should_trigger": false,
+    "hits": 0,
+    "passed": true
+   },
+   {
+    "query": "convert this SRT file to WebVTT",
+    "should_trigger": false,
+    "hits": 3,
+    "passed": false
+   },
+   {
+    "query": "find all the ums and uhs in my interview edit and mark them so I can go through them",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "who's speaking when in the transcript premiere made? rename Speaker 2 to Sean",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "add a crossfade between the two music clips on A2 in my premiere sequence",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "add a crossfade between these two clips in DaVinci Resolve",
+    "should_trigger": false,
+    "hits": 0,
+    "passed": true
+   },
+   {
+    "query": "transcribe this mp4 with whisper and give me the text",
+    "should_trigger": false,
+    "hits": 0,
+    "passed": true
+   }
+  ],
+  "validation": [
+   {
+    "query": "what's the frame rate and resolution of the sequences in /Volumes/Work/podcast_ep12/ep12.prproj",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "add a second audio track for sound effects to my edit and drop pop.wav at 0:32",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "the three screen recordings I sped up to 200% - can you give them the same slide-in move as the others",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "relink the media in my premiere project, I moved everything from my laptop to the external drive",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "transcribe this mp3 of my meeting",
+    "should_trigger": false,
+    "hits": 0,
+    "passed": true
+   },
+   {
+    "query": "I need a Final Cut Pro XML of this edit decision list",
+    "should_trigger": false,
+    "hits": 1,
+    "passed": true
+   },
+   {
+    "query": "what's the keyboard shortcut for ripple delete in premiere",
+    "should_trigger": false,
+    "hits": 0,
+    "passed": true
+   },
+   {
+    "query": "render a 10 second intro animation with Remotion",
+    "should_trigger": false,
+    "hits": 0,
+    "passed": true
+   },
+   {
+    "query": "export my sequence markers as YouTube chapters from the .prproj",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "cut out the bit where I say 'sorry, let me start again' in the Cut sequence, use the transcript to find it",
+    "should_trigger": true,
+    "hits": 3,
+    "passed": true
+   },
+   {
+    "query": "what's the difference between constant power and constant gain crossfades",
+    "should_trigger": false,
+    "hits": 0,
+    "passed": true
+   }
+  ]
+ }
+}

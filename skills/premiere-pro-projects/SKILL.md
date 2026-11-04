@@ -1,10 +1,10 @@
 ---
 name: premiere-pro-projects
-description: "Use this skill for any work inside an Adobe Premiere Pro project file (.prproj): reading its media, bins, sequences, tracks, markers, effects and cut list; pulling the embedded Speech-to-Text transcript, fixing speaker names or exporting captions/SRT; or changing the project (backup sequences, placing clips, splits, trims and ripple deletes, audio fades and crossfades, markers and chapters, renaming, locking or muting tracks, Transform moves with keyframes). Use it whenever the user asks about or wants changes to their Premiere edit, timeline, sequence or captions, even if they never say \".prproj\" or only describe the edit (\"slide that graphic in\", \"what's left in my cut\"). Not for editing rendered video files directly (ffmpeg), other editors' projects (Final Cut, DaVinci Resolve, After Effects), exporting/rendering, or how-to questions about Premiere's own UI."
+description: "Use this skill for any work inside an Adobe Premiere Pro project file (.prproj): reading its media, bins, sequences, tracks, markers, effects and cut list; pulling the embedded Speech-to-Text transcript, fixing speaker names or exporting captions/SRT; or changing the project (backup sequences, placing clips, splits, trims and ripple deletes, audio fades and crossfades, markers and chapters, renaming, locking or muting tracks, Transform moves with keyframes). Use it whenever the user asks about or wants changes to their Premiere edit, timeline, sequence or captions, even if they never say \".prproj\" or only describe the edit (\"slide that graphic in\", \"what's left in my cut\"). Not for editing rendered video files directly (ffmpeg), converting caption files between formats (SRT to WebVTT) when no project is involved, other editors' projects (Final Cut, DaVinci Resolve, After Effects), exporting/rendering, or how-to questions about Premiere's own UI."
 license: MIT
 compatibility: Requires Python 3.8+ (standard library only). Format evidence is from Premiere Pro 26.x (2026) projects; run scripts/selftest.py on projects from other versions.
 metadata:
-  version: "3.0"
+  version: "3.1"
 ---
 
 # Premiere Pro project files (.prproj)

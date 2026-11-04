@@ -395,6 +395,31 @@ def run_triggers(args, plugin, it_dir):
     json.dump(res, open(os.path.join(it_dir, 'triggers.json'), 'w'), indent=1)
     for split in res:
         print(f"{split}: {sum(r['passed'] for r in res[split])}/{len(res[split])} pass")
+    if not args.no_record:
+        record_triggers(res, it_dir, args)
+    shutil.rmtree(os.path.dirname(plugin), ignore_errors=True)
+
+
+def record_triggers(res, it_dir, args):
+    """Add a row to RESULTS.md's trigger table and keep the round's figures in evals/results/."""
+    n = int(os.path.basename(it_dir).split('-')[-1])
+    desc = re.search(r'^description:\s*(.+)$', open(os.path.join(SKILL, 'SKILL.md'), encoding='utf-8').read(), re.M).group(1)
+    ver = re.search(r'version:\s*"?([\w.]+)', open(os.path.join(SKILL, 'SKILL.md')).read())
+    dh = hashlib.sha256(desc.encode()).hexdigest()[:8]
+    f = lambda sp: f"{sum(r['passed'] for r in res.get(sp, []))}/{len(res.get(sp, []))}"
+    misses = [f"\"{r['query'][:60]}\" ({r['hits']}/3, {'should' if r['should_trigger'] else 'shouldn' + chr(39) + 't'} trigger)"
+              for sp in res for r in res[sp] if not r['passed']]
+    note = f"{args.model or 'CLI default'}; " + ('misses: ' + '; '.join(misses) if misses else 'no misses')
+    row = f"| {n} | {datetime.date.today().isoformat()} | {ver.group(1) if ver else '?'} (description {dh}) | {f('train')} | {f('validation')} | {note} |"
+    s = open(RESULTS, encoding='utf-8').read()
+    s = s.replace('| — | — | — | — | — | Not run yet |\n', '')
+    s = re.sub(rf"^\| {n} \| \d{{4}}-\d\d-\d\d \| [^|]*\(description .*\n", '', s, flags=re.M)
+    s = s.replace('\nEach query runs 3 times;', row + '\n\nEach query runs 3 times;', 1) if row not in s else s
+    open(RESULTS, 'w', encoding='utf-8').write(s)
+    os.makedirs(os.path.join(EVALS, 'results'), exist_ok=True)
+    json.dump({'iteration': n, 'model': args.model or 'CLI default', 'description_hash': dh, 'results': res},
+              open(os.path.join(EVALS, 'results', f'triggers-iteration-{n}.json'), 'w'), indent=1)
+    print('recorded in', os.path.relpath(RESULTS, ROOT), 'and', f'evals/results/triggers-iteration-{n}.json')
 
 
 # ---------- main ----------
